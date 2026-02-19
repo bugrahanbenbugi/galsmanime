@@ -7,7 +7,7 @@
 <link rel="icon" href="icon.jpg" type="image/jpeg">
 <meta name="google-site-verification" content="Ft1BDVaz2X3p14kKPEXWQOWIwl0FR_H1LZVrWHkxnWY" />
 <meta name="description" content="Galsmanime - Gachiakuta Turkce Dublaj izle. En kaliteli Turkce anime dublaj platformu.">
-<meta name="keywords" content="galsmanime, gachiakuta turkce dublaj, anime turkce dublaj, gachiakuta turkce izle">
+<meta name="keywords" content="galsmanime, gachiakuta turkce dublaj, anime turkce dublaj">
 <meta property="og:title" content="Galsmanime - Turkce Anime Dublaj">
 <meta property="og:description" content="Gachiakuta Turkce Dublaj izle.">
 <meta property="og:image" content="https://bugrahanbenbugi.github.io/galsmanime/gachiakuta_banner.jpg">
@@ -16,6 +16,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <style>
 :root{--b:#06060e;--b2:#0c0c18;--b3:#101024;--c:#0e0e1a;--c2:#141428;--p:#e63946;--pg:rgba(230,57,70,.15);--t:#e2e2ea;--t2:#7a7a96;--t3:#4a4a66;--bd:#1a1a30;--bd2:#252540;--r:10px;--nv:64px}
 *{margin:0;padding:0;box-sizing:border-box}
@@ -27,7 +28,6 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;border:none;outline:n
 .btn-s{padding:6px 14px;font-size:.78rem}.btn-l{padding:12px 26px;font-size:.95rem}.btn-f{width:100%;justify-content:center}
 .btn-p{background:var(--p);color:#fff}.btn-p:hover{filter:brightness(1.15)}
 .btn-g{background:rgba(255,255,255,.04);color:var(--t);border:1px solid var(--bd2)}.btn-g:hover{border-color:var(--p);color:var(--p)}
-
 .nav{position:fixed;top:0;left:0;right:0;height:var(--nv);background:rgba(6,6,14,.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--bd);z-index:9000;display:flex;align-items:center;padding:0 20px;gap:16px}
 .nav-logo{display:flex;align-items:center;gap:10px;font-size:1.15rem;font-weight:800;cursor:pointer;flex-shrink:0}
 .nav-logo img{width:36px;height:36px;border-radius:50%;object-fit:cover;border:2px solid var(--p)}
@@ -52,7 +52,6 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;border:none;outline:n
 .mob-menu.open{display:flex}
 .mob-menu a{padding:11px;color:var(--t2);border-radius:8px;font-size:.88rem}
 .mob-menu a:hover{background:var(--pg);color:var(--p)}
-
 .hero{position:relative;height:70vh;min-height:400px;max-height:600px;margin-top:var(--nv);overflow:hidden;background:var(--b2)}
 .hero-bg{position:absolute;inset:0;background-image:url('gachiakuta_banner.jpg');background-size:cover;background-position:center}
 .hero-dark{position:absolute;inset:0;background:linear-gradient(100deg,rgba(6,6,14,.94) 0%,rgba(6,6,14,.5) 55%,rgba(6,6,14,.3) 100%)}
@@ -64,11 +63,9 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;border:none;outline:n
 .hero-meta span{display:flex;align-items:center;gap:4px;font-size:.82rem;color:var(--t2)}
 .hero-meta .fa-star{color:var(--p)}
 .hero-btns{display:flex;gap:10px}
-
 .sec{padding:50px 0}.sec-dark{background:var(--b2)}
 .sec-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:26px}
 .sec-head h2{font-size:1.15rem;font-weight:700}
-
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:18px}
 .card{background:var(--c);border-radius:var(--r);overflow:hidden;border:1px solid var(--bd);transition:.25s;cursor:pointer}
 .card:hover{transform:translateY(-5px);border-color:var(--p);box-shadow:0 10px 25px rgba(230,57,70,.08)}
@@ -85,7 +82,6 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;border:none;outline:n
 .card-info h3{font-size:.84rem;font-weight:600;margin-bottom:3px}
 .card-info .genre{font-size:.68rem;color:var(--t3)}
 .card-info .meta{display:flex;justify-content:space-between;font-size:.68rem;color:var(--t2);margin-top:5px}
-
 .detail-top{padding:100px 0 40px;background:var(--b2);margin-top:var(--nv)}
 .detail-flex{display:flex;gap:24px;align-items:flex-end}
 .detail-poster{width:180px;height:250px;border-radius:var(--r);overflow:hidden;flex-shrink:0;border:2px solid var(--bd)}
@@ -95,7 +91,6 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;border:none;outline:n
 .detail-tags span{padding:3px 10px;background:rgba(255,255,255,.05);border-radius:50px;font-size:.73rem;color:var(--t2)}
 .detail-desc{color:var(--t2);font-size:.86rem;margin-bottom:14px;max-width:500px}
 .detail-btns{display:flex;gap:10px;flex-wrap:wrap}
-
 .ep-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px;margin-bottom:30px}
 .ep-card{display:flex;gap:10px;padding:12px;background:var(--c);border-radius:var(--r);border:1px solid var(--bd);cursor:pointer;transition:.25s}
 .ep-card:hover{border-color:var(--p);background:var(--c2)}
@@ -104,7 +99,6 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;border:none;outline:n
 .ep-thumb img{width:100%;height:100%;object-fit:cover}
 .ep-info h4{font-size:.8rem;font-weight:600;margin-bottom:2px}
 .ep-info p{font-size:.7rem;color:var(--t3)}
-
 .cmt-section{margin-top:30px}
 .cmt-form textarea{width:100%;padding:12px;background:var(--c);border:1px solid var(--bd);border-radius:var(--r);color:var(--t);resize:vertical;font-size:.84rem;min-height:60px}
 .cmt-form textarea:focus{border-color:var(--p)}
@@ -116,7 +110,6 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;border:none;outline:n
 .cmt-top .name{font-weight:600;font-size:.82rem}
 .cmt-top .date{font-size:.7rem;color:var(--t3)}
 .cmt-text{font-size:.84rem;color:var(--t2)}
-
 .watch-wrap{display:flex;gap:16px;margin-top:var(--nv);padding:16px;min-height:calc(100vh - var(--nv))}
 .watch-main{flex:1}
 .player{position:relative;width:100%;padding-top:56.25%;background:#000;border-radius:var(--r);overflow:hidden}
@@ -136,7 +129,6 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;border:none;outline:n
 .ep-list-item{padding:8px;border-radius:8px;cursor:pointer;margin-bottom:3px;font-size:.78rem;transition:.25s}
 .ep-list-item:hover{background:var(--c2)}
 .ep-list-item.on{background:var(--pg);border-left:2px solid var(--p)}
-
 .comm-wrap{display:flex;gap:24px;padding:24px 0}.comm-main{flex:1}.comm-side{width:300px;flex-shrink:0}
 .post-box{background:var(--c);border-radius:var(--r);padding:14px;margin-bottom:18px;border:1px solid var(--bd)}
 .post-box textarea{width:100%;padding:10px;background:var(--b3);border:1px solid var(--bd);border-radius:var(--r);color:var(--t);resize:vertical;font-size:.84rem}
@@ -152,18 +144,15 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;border:none;outline:n
 .post-foot button:hover{color:var(--p)}
 .side-card{background:var(--c);border-radius:var(--r);padding:14px;margin-bottom:14px;border:1px solid var(--bd)}
 .side-card h3{font-size:.88rem;font-weight:700;margin-bottom:10px}
-
 .prof-top{padding:100px 0 30px;background:var(--b2);margin-top:var(--nv)}
 .prof-head{display:flex;align-items:flex-end;gap:20px}
 .prof-ava{width:90px;height:90px;border-radius:50%;background:var(--p);display:flex;align-items:center;justify-content:center;color:#fff;font-size:2rem;font-weight:800;flex-shrink:0}
 .prof-info h1{font-size:1.5rem;font-weight:800}
 .prof-info p{color:var(--t2);font-size:.84rem}
-
 .set-wrap{padding-top:calc(var(--nv)+30px)}.set-wrap h1{font-size:1.4rem;font-weight:800;margin-bottom:20px}
 .f-row{margin-bottom:14px}.f-row label{display:block;font-size:.8rem;font-weight:600;margin-bottom:5px;color:var(--t2)}
 .f-input{width:100%;padding:10px 14px;background:var(--c);border:1px solid var(--bd);border-radius:8px;color:var(--t);font-size:.84rem}.f-input:focus{border-color:var(--p)}
 textarea.f-input{resize:vertical;min-height:60px}
-
 .modal{position:fixed;inset:0;background:rgba(0,0,0,.7);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;z-index:10000;padding:20px}
 .modal.open{display:flex}
 .m-box{background:var(--b2);border-radius:14px;padding:28px;width:100%;max-width:380px;border:1px solid var(--bd);position:relative}
@@ -171,11 +160,9 @@ textarea.f-input{resize:vertical;min-height:60px}
 .m-close:hover{background:var(--p);color:#fff}
 .m-head{text-align:center;margin-bottom:20px}.m-head h2{font-size:1.2rem;font-weight:800}
 .m-foot{text-align:center;margin-top:14px;font-size:.8rem;color:var(--t3)}.m-foot a{color:var(--p);font-weight:600;cursor:pointer}
-
 .toast-wrap{position:fixed;top:76px;right:16px;z-index:99999;display:flex;flex-direction:column;gap:8px}
 .toast{padding:12px 16px;border-radius:var(--r);background:var(--c);border:1px solid var(--bd);font-size:.82rem}
 .toast.ok{border-left:3px solid #10b981}.toast.err{border-left:3px solid #ef4444}
-
 .footer{background:var(--b2);border-top:1px solid var(--bd);margin-top:40px}
 .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px;padding:36px 0}
 .foot-logo{display:flex;align-items:center;gap:10px;font-size:1.1rem;font-weight:800;margin-bottom:10px}
@@ -187,12 +174,14 @@ textarea.f-input{resize:vertical;min-height:60px}
 .socials a{width:34px;height:34px;border-radius:50%;background:var(--c);color:var(--t3);display:flex;align-items:center;justify-content:center;font-size:.9rem;border:1px solid var(--bd)}
 .socials a:hover{color:var(--p);border-color:var(--p)}
 .foot-bottom{text-align:center;padding:14px 0;border-top:1px solid var(--bd);font-size:.72rem;color:var(--t3)}
-
 .pg-banner{height:220px;display:flex;flex-direction:column;align-items:center;justify-content:center;margin-top:var(--nv);background:var(--b3);position:relative;overflow:hidden}
 .pg-banner img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.15}
 .pg-banner h1{font-size:1.8rem;font-weight:900;position:relative;z-index:2}
 .pg-banner p{color:var(--t2);font-size:.9rem;position:relative;z-index:2}
-
+.verify-box{text-align:center;padding:20px 0}
+.verify-box input{width:180px;padding:10px;background:var(--c);border:1px solid var(--bd);border-radius:8px;color:var(--t);font-size:1.1rem;text-align:center;letter-spacing:8px}
+.verify-box input:focus{border-color:var(--p)}
+.verify-box p{color:var(--t2);font-size:.82rem;margin-bottom:12px}
 @media(max-width:1024px){.comm-side{display:none}.foot-grid{grid-template-columns:1fr 1fr}.watch-side{width:240px}}
 @media(max-width:768px){.nav-links{display:none}.nav-search{max-width:160px}.mob-btn{display:flex}.hero{height:55vh}.hero-info h1{font-size:1.6rem}.hero-info{left:14px;right:14px;bottom:10%}.grid{grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px}.detail-flex{flex-direction:column;align-items:center;text-align:center}.watch-wrap{flex-direction:column}.watch-side{width:100%;max-height:220px}.prof-head{flex-direction:column;align-items:center;text-align:center}.foot-grid{grid-template-columns:1fr}}
 @media(max-width:480px){.nav-search{display:none}.grid{grid-template-columns:repeat(2,1fr)}.ep-grid{grid-template-columns:1fr}}
@@ -218,14 +207,12 @@ textarea.f-input{resize:vertical;min-height:60px}
 <div class="hero-meta"><span><i class="fa-solid fa-star"></i> 8.7</span><span><i class="fa-solid fa-clock"></i> 24dk</span></div>
 <div class="hero-btns"><button class="btn btn-p btn-l" onclick="go('watch')"><i class="fa-solid fa-play"></i> Izle</button><button class="btn btn-g btn-l" onclick="go('detail')">Detay</button></div>
 </div></section>
-
 <section class="sec"><div class="box"><div class="sec-head"><h2>Son Eklenen</h2></div><div class="grid" id="g1"></div></div></section>
 </div>
 
 <div class="pg" id="pg-list">
 <div class="pg-banner"><img src="gachiakuta_banner.jpg" alt=""><h1>Gachiakuta</h1><p>Tum Bolumler - Turkce Dublaj</p></div>
-<div class="box" style="padding-top:20px"><div class="grid" id="g2"></div></div>
-</div>
+<div class="box" style="padding-top:20px"><div class="grid" id="g2"></div></div></div>
 
 <div class="pg" id="pg-detail">
 <div class="detail-top"><div class="box detail-flex">
@@ -266,9 +253,14 @@ textarea.f-input{resize:vertical;min-height:60px}
 <div class="f-row"><label>E-posta</label><input type="email" class="f-input" id="se"></div>
 <button class="btn btn-p" onclick="saveS()">Kaydet</button></div></div>
 
+<!-- LOGIN -->
 <div class="modal" id="lm"><div class="m-box"><button class="m-close" onclick="closeM('lm')"><i class="fa-solid fa-xmark"></i></button><div class="m-head"><h2>Giris Yap</h2></div><form onsubmit="doLog(event)"><div class="f-row"><label>E-posta</label><input type="email" class="f-input" id="le" required></div><div class="f-row"><label>Sifre</label><input type="password" class="f-input" id="lp" required></div><button type="submit" class="btn btn-p btn-f">Giris Yap</button></form><div class="m-foot">Hesabin yok mu? <a onclick="closeM('lm');openM('rm')">Kayit Ol</a></div></div></div>
 
-<div class="modal" id="rm"><div class="m-box"><button class="m-close" onclick="closeM('rm')"><i class="fa-solid fa-xmark"></i></button><div class="m-head"><h2>Kayit Ol</h2></div><form onsubmit="doReg(event)"><div class="f-row"><label>Kullanici Adi</label><input type="text" class="f-input" id="rn" required></div><div class="f-row"><label>E-posta</label><input type="email" class="f-input" id="re" required></div><div class="f-row"><label>Sifre</label><input type="password" class="f-input" id="rp" required></div><div class="f-row"><label>Sifre Tekrar</label><input type="password" class="f-input" id="rp2" required></div><div style="margin-bottom:14px"><div class="g-recaptcha" data-sitekey="6LclTnEsAAAAAPrM26XUgZis75hJACTkaJ9m1oR4"></div></div><button type="submit" class="btn btn-p btn-f">Kayit Ol</button></form><div class="m-foot">Hesabin var mi? <a onclick="closeM('rm');openM('lm')">Giris Yap</a></div></div></div>
+<!-- REGISTER STEP 1 -->
+<div class="modal" id="rm"><div class="m-box"><button class="m-close" onclick="closeM('rm')"><i class="fa-solid fa-xmark"></i></button><div class="m-head"><h2>Kayit Ol</h2></div><form onsubmit="sendCode(event)"><div class="f-row"><label>Kullanici Adi</label><input type="text" class="f-input" id="rn" required></div><div class="f-row"><label>E-posta</label><input type="email" class="f-input" id="re" required></div><div class="f-row"><label>Sifre</label><input type="password" class="f-input" id="rp" required></div><div class="f-row"><label>Sifre Tekrar</label><input type="password" class="f-input" id="rp2" required></div><div style="margin-bottom:14px"><div class="g-recaptcha" data-sitekey="6LclTnEsAAAAAPrM26XUgZis75hJACTkaJ9m1oR4"></div></div><button type="submit" class="btn btn-p btn-f" id="regBtn">Dogrulama Kodu Gonder</button></form><div class="m-foot">Hesabin var mi? <a onclick="closeM('rm');openM('lm')">Giris Yap</a></div></div></div>
+
+<!-- VERIFY CODE -->
+<div class="modal" id="vm"><div class="m-box"><button class="m-close" onclick="closeM('vm')"><i class="fa-solid fa-xmark"></i></button><div class="m-head"><h2>E-posta Dogrulama</h2></div><div class="verify-box"><p>E-postaniza gonderilen 6 haneli kodu girin</p><input type="text" id="vc" maxlength="6" placeholder="------"><br><br><button class="btn btn-p btn-f" onclick="verifyCode()">Dogrula ve Kayit Ol</button><br><br><button class="btn btn-g btn-s" onclick="resendCode()">Tekrar Gonder</button></div></div></div>
 
 <div class="toast-wrap" id="tw"></div>
 
@@ -279,11 +271,77 @@ textarea.f-input{resize:vertical;min-height:60px}
 </div><div class="foot-bottom">2024 Galsmanime. Tum haklari saklidir.</div></div></footer>
 
 <script>
+emailjs.init("E8v_EWpLBmIrSJVTN");
+
 var cmts=[],posts=[
 {u:"AnimeFan",t:"Gachiakuta dublaji muhtesem olmus! Rudo'nun sesi cok uygun.",d:"2 saat once",l:24},
 {u:"OtakuTR",t:"Yeni bolum icin sabrsizlaniyorum! Cok iyi bir anime.",d:"5 saat once",l:18},
 {u:"MangaKral",t:"Manga okudum, anime de ayni kalitede. Harika is!",d:"1 gun once",l:32}
 ],user=JSON.parse(localStorage.getItem("gmU"))||null;
+
+var pendingUser=null,vCode="";
+
+function genCode(){return Math.floor(100000+Math.random()*900000).toString();}
+
+function sendCode(e){
+e.preventDefault();
+var cap=grecaptcha.getResponse();
+if(!cap){toast("Robot degilim kutusunu isaretleyin","err");return;}
+var nm=document.getElementById("rn").value,em=document.getElementById("re").value,pw=document.getElementById("rp").value,pw2=document.getElementById("rp2").value;
+if(pw!==pw2){toast("Sifreler eslesmiyor","err");return;}
+if(pw.length<4){toast("Sifre en az 4 karakter","err");return;}
+var us=JSON.parse(localStorage.getItem("gmUs")||"[]");
+for(var i=0;i<us.length;i++){if(us[i].e===em){toast("Bu email kayitli","err");return;}}
+pendingUser={n:nm,e:em,p:pw};
+vCode=genCode();
+document.getElementById("regBtn").textContent="Gonderiliyor...";
+document.getElementById("regBtn").disabled=true;
+emailjs.send("service_b08bwdl","template_z7sr4wv",{
+email:em,
+to_name:nm,
+passcode:vCode,
+time:"15 dakika"
+}).then(function(){
+toast("Dogrulama kodu gonderildi!","ok");
+closeM("rm");
+openM("vm");
+document.getElementById("regBtn").textContent="Dogrulama Kodu Gonder";
+document.getElementById("regBtn").disabled=false;
+},function(err){
+toast("Kod gonderilemedi: "+err.text,"err");
+document.getElementById("regBtn").textContent="Dogrulama Kodu Gonder";
+document.getElementById("regBtn").disabled=false;
+});
+}
+
+function verifyCode(){
+var input=document.getElementById("vc").value.trim();
+if(input===vCode){
+var us=JSON.parse(localStorage.getItem("gmUs")||"[]");
+us.push(pendingUser);
+localStorage.setItem("gmUs",JSON.stringify(us));
+user=pendingUser;
+localStorage.setItem("gmU",JSON.stringify(user));
+closeM("vm");
+updateUI();
+toast("Kayit basarili! Hos geldin "+user.n,"ok");
+pendingUser=null;vCode="";
+document.getElementById("vc").value="";
+}else{
+toast("Kod yanlis, tekrar deneyin","err");
+}
+}
+
+function resendCode(){
+if(!pendingUser){toast("Hata olustu","err");return;}
+vCode=genCode();
+emailjs.send("service_b08bwdl","template_z7sr4wv",{
+email:pendingUser.e,
+to_name:pendingUser.n,
+passcode:vCode,
+time:"15 dakika"
+}).then(function(){toast("Kod tekrar gonderildi!","ok");},function(){toast("Gonderilemedi","err");});
+}
 
 function mc(ep){return'<div class="card" onclick="go(\'detail\')"><div class="card-img"><img src="gachiakuta_card.jpg" alt="Gachiakuta"><div class="card-hover"><div class="card-play"><i class="fa-solid fa-play"></i></div></div><span class="card-badge">Bolum '+ep+'</span><span class="card-rate"><i class="fa-solid fa-star"></i> 8.7</span></div><div class="card-info"><h3>Gachiakuta</h3><div class="genre">Aksiyon - Bolum '+ep+'</div><div class="meta"><span>Turkce Dublaj</span><span>24dk</span></div></div></div>';}
 
@@ -300,25 +358,19 @@ if(user){document.getElementById("sn").value=user.n||"";document.getElementById(
 }
 
 function goEp(n){document.getElementById("wt").textContent="Gachiakuta - Bolum "+n;document.getElementById("vo").classList.remove("hide");go("watch");}
-
 function renderC(){var l=document.getElementById("cl");if(cmts.length===0){l.innerHTML='<p style="color:var(--t3);font-size:.84rem">Henuz yorum yok. Ilk yorumu sen yap!</p>';return;}var h="";for(var i=0;i<cmts.length;i++){var c=cmts[i];h+='<div class="cmt"><div class="cmt-ava">'+c.u[0]+'</div><div class="cmt-body"><div class="cmt-top"><span class="name">'+c.u+'</span><span class="date">'+c.d+'</span></div><div class="cmt-text">'+c.t+'</div></div></div>';}l.innerHTML=h;}
 
 function go(p){var a=document.querySelectorAll(".pg");for(var i=0;i<a.length;i++)a[i].classList.remove("on");var e=document.getElementById("pg-"+p);if(e)e.classList.add("on");var l=document.querySelectorAll(".nav-links a");for(var i=0;i<l.length;i++){l[i].classList.remove("on");if(l[i].getAttribute("data-p")===p)l[i].classList.add("on");}document.getElementById("mm").classList.remove("open");document.getElementById("dd").classList.remove("open");window.scrollTo(0,0);}
-
 function doSearch(){var v=document.getElementById("si").value.toLowerCase();if(v.length>=2&&"gachiakuta".indexOf(v)>=0)toast("Gachiakuta bulundu!","ok");}
-
 function updateUI(){var a=document.getElementById("ab"),u=document.getElementById("ub"),n=document.getElementById("un"),cf=document.getElementById("cf"),pb=document.getElementById("pb"),pa=document.getElementById("pa"),pn=document.getElementById("pn");if(user){a.style.display="none";u.style.display="flex";n.textContent=user.n;if(cf)cf.style.display="block";if(pb)pb.style.display="block";if(pa)pa.textContent=user.n[0].toUpperCase();if(pn)pn.textContent=user.n;}else{a.style.display="flex";u.style.display="none";if(cf)cf.style.display="none";if(pb)pb.style.display="none";}}
 
 function doLog(e){e.preventDefault();var em=document.getElementById("le").value,pw=document.getElementById("lp").value,us=JSON.parse(localStorage.getItem("gmUs")||"[]"),f=null;for(var i=0;i<us.length;i++){if(us[i].e===em&&us[i].p===pw)f=us[i];}if(f){user=f;localStorage.setItem("gmU",JSON.stringify(user));closeM("lm");updateUI();toast("Giris basarili!","ok");}else toast("Email veya sifre yanlis","err");}
-
-function doReg(e){e.preventDefault();var cap=grecaptcha.getResponse();if(!cap){toast("Robot degilim kutusunu isaretleyin","err");return;}var nm=document.getElementById("rn").value,em=document.getElementById("re").value,pw=document.getElementById("rp").value,pw2=document.getElementById("rp2").value;if(pw!==pw2){toast("Sifreler eslesmiyor","err");return;}if(pw.length<4){toast("Sifre en az 4 karakter","err");return;}var us=JSON.parse(localStorage.getItem("gmUs")||"[]");for(var i=0;i<us.length;i++){if(us[i].e===em){toast("Bu email kayitli","err");return;}}var u={n:nm,e:em,p:pw};us.push(u);localStorage.setItem("gmUs",JSON.stringify(us));user=u;localStorage.setItem("gmU",JSON.stringify(u));closeM("rm");updateUI();toast("Kayit basarili!","ok");}
 
 function logout(){user=null;localStorage.removeItem("gmU");document.getElementById("dd").classList.remove("open");updateUI();toast("Cikis yapildi","ok");}
 function saveS(){if(!user){toast("Giris yapin","err");return;}var n=document.getElementById("sn").value,e=document.getElementById("se").value;if(n)user.n=n;if(e)user.e=e;localStorage.setItem("gmU",JSON.stringify(user));updateUI();toast("Kaydedildi","ok");}
 function postC(){if(!user){toast("Giris yapin","err");openM("lm");return;}var t=document.getElementById("ci").value.trim();if(!t){toast("Yorum yazin","err");return;}cmts.unshift({u:user.n,t:t,d:"Simdi"});document.getElementById("ci").value="";renderC();toast("Yorum eklendi","ok");}
 function newPost(){if(!user){toast("Giris yapin","err");return;}var t=document.getElementById("pi").value.trim();if(!t){toast("Bir seyler yazin","err");return;}posts.unshift({u:user.n,t:t,d:"Simdi",l:0});document.getElementById("pi").value="";init();toast("Paylasim yapildi","ok");}
 function togFav(b){if(!user){toast("Giris yapin","err");openM("lm");return;}b.innerHTML='<i class="fa-solid fa-heart" style="color:var(--p)"></i> Favorilerde';toast("Favorilere eklendi","ok");}
-
 function openM(id){document.getElementById(id).classList.add("open");}
 function closeM(id){document.getElementById(id).classList.remove("open");}
 function toast(m,t){var w=document.getElementById("tw"),d=document.createElement("div");d.className="toast "+(t||"ok");d.textContent=m;w.appendChild(d);setTimeout(function(){d.remove();},3000);}
