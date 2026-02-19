@@ -3,23 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GalsManime</title>
-<link rel="icon" href="https://i.pinimg.com/736x/29/60/55/296055037af498e60024e498046c498b.jpg" type="image/jpeg">
+<title>Galsmanime</title>
+<link rel="icon" href="icon.jpg" type="image/jpeg">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
 :root{--b:#06060e;--b2:#0c0c18;--b3:#101024;--c:#0e0e1a;--c2:#141428;--p:#e63946;--pg:rgba(230,57,70,.15);--t:#e2e2ea;--t2:#7a7a96;--t3:#4a4a66;--bd:#1a1a30;--bd2:#252540;--r:10px;--nv:64px}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Inter',sans-serif;background:var(--b);color:var(--t);line-height:1.6;overflow-x:hidden}
-a{text-decoration:none;color:inherit}
-button{cursor:pointer;border:none;outline:none;font-family:inherit}
-input,select,textarea{font-family:inherit;outline:none}
+a{text-decoration:none;color:inherit}button{cursor:pointer;border:none;outline:none;font-family:inherit}input,select,textarea{font-family:inherit;outline:none}
 .box{max-width:1300px;margin:0 auto;padding:0 20px}
 .pg{display:none}.pg.on{display:block}
 .btn{display:inline-flex;align-items:center;gap:7px;padding:9px 20px;border-radius:8px;font-weight:600;font-size:.84rem;transition:.25s}
-.btn-s{padding:6px 14px;font-size:.78rem}
-.btn-l{padding:12px 26px;font-size:.95rem}
-.btn-f{width:100%;justify-content:center}
+.btn-s{padding:6px 14px;font-size:.78rem}.btn-l{padding:12px 26px;font-size:.95rem}.btn-f{width:100%;justify-content:center}
 .btn-p{background:var(--p);color:#fff}.btn-p:hover{filter:brightness(1.15)}
 .btn-g{background:rgba(255,255,255,.04);color:var(--t);border:1px solid var(--bd2)}.btn-g:hover{border-color:var(--p);color:var(--p)}
 
@@ -50,7 +46,7 @@ input,select,textarea{font-family:inherit;outline:none}
 .mob-menu a:hover{background:var(--pg);color:var(--p)}
 
 .hero{position:relative;height:70vh;min-height:400px;max-height:600px;margin-top:var(--nv);overflow:hidden;background:var(--b2)}
-.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center}
+.hero-bg{position:absolute;inset:0;background-image:url('banner.jpg');background-size:cover;background-position:center}
 .hero-dark{position:absolute;inset:0;background:linear-gradient(100deg,rgba(6,6,14,.94) 0%,rgba(6,6,14,.5) 55%,rgba(6,6,14,.3) 100%)}
 .hero-info{position:absolute;bottom:12%;left:5%;max-width:520px;z-index:2}
 .hero-badge{display:inline-block;padding:4px 13px;border-radius:50px;font-size:.7rem;font-weight:700;margin-bottom:12px;color:#fff;background:var(--p)}
@@ -61,8 +57,7 @@ input,select,textarea{font-family:inherit;outline:none}
 .hero-meta .fa-star{color:var(--p)}
 .hero-btns{display:flex;gap:10px}
 
-.sec{padding:50px 0}
-.sec-dark{background:var(--b2)}
+.sec{padding:50px 0}.sec-dark{background:var(--b2)}
 .sec-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:26px}
 .sec-head h2{font-size:1.15rem;font-weight:700}
 
@@ -113,9 +108,6 @@ input,select,textarea{font-family:inherit;outline:none}
 .cmt-top .name{font-weight:600;font-size:.82rem}
 .cmt-top .date{font-size:.7rem;color:var(--t3)}
 .cmt-text{font-size:.84rem;color:var(--t2)}
-.cmt-acts{display:flex;gap:10px;margin-top:5px}
-.cmt-acts button{background:none;color:var(--t3);font-size:.74rem;display:flex;align-items:center;gap:3px}
-.cmt-acts button:hover{color:var(--p)}
 
 .watch-wrap{display:flex;gap:16px;margin-top:var(--nv);padding:16px;min-height:calc(100vh - var(--nv))}
 .watch-main{flex:1}
@@ -137,9 +129,7 @@ input,select,textarea{font-family:inherit;outline:none}
 .ep-list-item:hover{background:var(--c2)}
 .ep-list-item.on{background:var(--pg);border-left:2px solid var(--p)}
 
-.comm-wrap{display:flex;gap:24px;padding:24px 0}
-.comm-main{flex:1}
-.comm-side{width:300px;flex-shrink:0}
+.comm-wrap{display:flex;gap:24px;padding:24px 0}.comm-main{flex:1}.comm-side{width:300px;flex-shrink:0}
 .post-box{background:var(--c);border-radius:var(--r);padding:14px;margin-bottom:18px;border:1px solid var(--bd)}
 .post-box textarea{width:100%;padding:10px;background:var(--b3);border:1px solid var(--bd);border-radius:var(--r);color:var(--t);resize:vertical;font-size:.84rem}
 .post-box-foot{display:flex;justify-content:flex-end;margin-top:8px}
@@ -159,14 +149,11 @@ input,select,textarea{font-family:inherit;outline:none}
 .prof-head{display:flex;align-items:flex-end;gap:20px}
 .prof-ava{width:90px;height:90px;border-radius:50%;background:var(--p);display:flex;align-items:center;justify-content:center;color:#fff;font-size:2rem;font-weight:800;flex-shrink:0}
 .prof-info h1{font-size:1.5rem;font-weight:800}
-.prof-info p{color:var(--t2);font-size:.84rem;margin-bottom:6px}
+.prof-info p{color:var(--t2);font-size:.84rem}
 
-.set-wrap{padding-top:calc(var(--nv) + 30px)}
-.set-wrap h1{font-size:1.4rem;font-weight:800;margin-bottom:20px}
-.f-row{margin-bottom:14px}
-.f-row label{display:block;font-size:.8rem;font-weight:600;margin-bottom:5px;color:var(--t2)}
-.f-input{width:100%;padding:10px 14px;background:var(--c);border:1px solid var(--bd);border-radius:8px;color:var(--t);font-size:.84rem}
-.f-input:focus{border-color:var(--p)}
+.set-wrap{padding-top:calc(var(--nv)+30px)}.set-wrap h1{font-size:1.4rem;font-weight:800;margin-bottom:20px}
+.f-row{margin-bottom:14px}.f-row label{display:block;font-size:.8rem;font-weight:600;margin-bottom:5px;color:var(--t2)}
+.f-input{width:100%;padding:10px 14px;background:var(--c);border:1px solid var(--bd);border-radius:8px;color:var(--t);font-size:.84rem}.f-input:focus{border-color:var(--p)}
 textarea.f-input{resize:vertical;min-height:60px}
 
 .modal{position:fixed;inset:0;background:rgba(0,0,0,.7);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;z-index:10000;padding:20px}
@@ -174,36 +161,30 @@ textarea.f-input{resize:vertical;min-height:60px}
 .m-box{background:var(--b2);border-radius:14px;padding:28px;width:100%;max-width:380px;border:1px solid var(--bd);position:relative}
 .m-close{position:absolute;top:12px;right:12px;width:30px;height:30px;border-radius:50%;background:var(--c);color:var(--t2);display:flex;align-items:center;justify-content:center;font-size:.8rem}
 .m-close:hover{background:var(--p);color:#fff}
-.m-head{text-align:center;margin-bottom:20px}
-.m-head h2{font-size:1.2rem;font-weight:800;margin-bottom:4px}
-.m-head p{color:var(--t3);font-size:.82rem}
-.m-foot{text-align:center;margin-top:14px;font-size:.8rem;color:var(--t3)}
-.m-foot a{color:var(--p);font-weight:600;cursor:pointer}
+.m-head{text-align:center;margin-bottom:20px}.m-head h2{font-size:1.2rem;font-weight:800}
+.m-foot{text-align:center;margin-top:14px;font-size:.8rem;color:var(--t3)}.m-foot a{color:var(--p);font-weight:600;cursor:pointer}
 
 .toast-wrap{position:fixed;top:76px;right:16px;z-index:99999;display:flex;flex-direction:column;gap:8px}
 .toast{padding:12px 16px;border-radius:var(--r);background:var(--c);border:1px solid var(--bd);font-size:.82rem}
-.toast.ok{border-left:3px solid #10b981}
-.toast.err{border-left:3px solid #ef4444}
+.toast.ok{border-left:3px solid #10b981}.toast.err{border-left:3px solid #ef4444}
 
 .footer{background:var(--b2);border-top:1px solid var(--bd);margin-top:40px}
-.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px;padding:36px 0}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px;padding:36px 0}
 .foot-logo{display:flex;align-items:center;gap:10px;font-size:1.1rem;font-weight:800;margin-bottom:10px}
 .foot-logo img{width:30px;height:30px;border-radius:50%;object-fit:cover}
 .foot-logo b{color:var(--p)}
 .foot-col p{color:var(--t3);font-size:.8rem;line-height:1.7}
 .foot-col h3{font-size:.86rem;font-weight:700;margin-bottom:10px}
-.foot-col ul{list-style:none}
-.foot-col ul li{margin-bottom:5px}
-.foot-col ul a{color:var(--t3);font-size:.8rem}
-.foot-col ul a:hover{color:var(--p)}
+.foot-col ul{list-style:none}.foot-col ul li{margin-bottom:5px}.foot-col ul a{color:var(--t3);font-size:.8rem}.foot-col ul a:hover{color:var(--p)}
 .socials{display:flex;gap:8px;margin-top:10px}
 .socials a{width:34px;height:34px;border-radius:50%;background:var(--c);color:var(--t3);display:flex;align-items:center;justify-content:center;font-size:.9rem;border:1px solid var(--bd)}
 .socials a:hover{color:var(--p);border-color:var(--p)}
 .foot-bottom{text-align:center;padding:14px 0;border-top:1px solid var(--bd);font-size:.72rem;color:var(--t3)}
 
-.pg-banner{height:220px;display:flex;flex-direction:column;align-items:center;justify-content:center;margin-top:var(--nv);background:var(--b3)}
-.pg-banner h1{font-size:1.8rem;font-weight:900}
-.pg-banner p{color:var(--t2);font-size:.9rem}
+.pg-banner{height:220px;display:flex;flex-direction:column;align-items:center;justify-content:center;margin-top:var(--nv);background:var(--b3);position:relative;overflow:hidden}
+.pg-banner img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.15}
+.pg-banner h1{font-size:1.8rem;font-weight:900;position:relative;z-index:2}
+.pg-banner p{color:var(--t2);font-size:.9rem;position:relative;z-index:2}
 
 @media(max-width:1024px){.comm-side{display:none}.foot-grid{grid-template-columns:1fr 1fr}.watch-side{width:240px}}
 @media(max-width:768px){.nav-links{display:none}.nav-search{max-width:160px}.mob-btn{display:flex}.hero{height:55vh}.hero-info h1{font-size:1.6rem}.hero-info{left:14px;right:14px;bottom:10%}.grid{grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px}.detail-flex{flex-direction:column;align-items:center;text-align:center}.watch-wrap{flex-direction:column}.watch-side{width:100%;max-height:220px}.prof-head{flex-direction:column;align-items:center;text-align:center}.foot-grid{grid-template-columns:1fr}}
@@ -213,225 +194,145 @@ textarea.f-input{resize:vertical;min-height:60px}
 <body>
 
 <div class="nav">
-<div class="nav-logo" onclick="go('home')"><img src="https://i.pinimg.com/736x/29/60/55/296055037af498e60024e498046c498b.jpg" alt="Logo">Gals<b>Manime</b></div>
-<div class="nav-search"><input type="text" id="searchInput" placeholder="Anime ara..." onkeyup="doSearch()"><i class="fa-solid fa-magnifying-glass"></i></div>
-<ul class="nav-links"><li><a href="#" onclick="go('home')" class="on" data-p="home">Ana Sayfa</a></li><li><a href="#" onclick="go('list')" data-p="list">Anime Listesi</a></li><li><a href="#" onclick="go('comm')" data-p="comm">Topluluk</a></li></ul>
+<div class="nav-logo" onclick="go('home')"><img src="icon.jpg" alt="">Gals<b>manime</b></div>
+<div class="nav-search"><input type="text" id="si" placeholder="Anime ara..." onkeyup="doSearch()"><i class="fa-solid fa-magnifying-glass"></i></div>
+<ul class="nav-links"><li><a href="#" onclick="go('home')" class="on" data-p="home">Ana Sayfa</a></li><li><a href="#" onclick="go('list')" data-p="list">Bolumler</a></li><li><a href="#" onclick="go('comm')" data-p="comm">Topluluk</a></li></ul>
 <div class="nav-right">
-<div class="auth-btns" id="authBtns"><button class="btn btn-g btn-s" onclick="openModal('loginModal')">Giris Yap</button><button class="btn btn-p btn-s" onclick="openModal('regModal')">Kayit Ol</button></div>
-<div class="user-btn" id="userBtn" onclick="document.getElementById('userDD').classList.toggle('open')"><span id="userName"></span></div>
-<div class="dropdown" id="userDD"><a href="#" onclick="go('profile')"><i class="fa-solid fa-user"></i> Profilim</a><a href="#" onclick="go('settings')"><i class="fa-solid fa-gear"></i> Ayarlar</a><hr><a href="#" onclick="doLogout()" style="color:var(--p)"><i class="fa-solid fa-right-from-bracket"></i> Cikis</a></div>
-<button class="mob-btn" onclick="document.getElementById('mobMenu').classList.toggle('open')"><i class="fa-solid fa-bars"></i></button>
+<div class="auth-btns" id="ab"><button class="btn btn-g btn-s" onclick="openM('lm')">Giris Yap</button><button class="btn btn-p btn-s" onclick="openM('rm')">Kayit Ol</button></div>
+<div class="user-btn" id="ub" onclick="document.getElementById('dd').classList.toggle('open')"><span id="un"></span></div>
+<div class="dropdown" id="dd"><a href="#" onclick="go('profile')"><i class="fa-solid fa-user"></i> Profilim</a><a href="#" onclick="go('settings')"><i class="fa-solid fa-gear"></i> Ayarlar</a><hr><a href="#" onclick="logout()" style="color:var(--p)"><i class="fa-solid fa-right-from-bracket"></i> Cikis</a></div>
+<button class="mob-btn" onclick="document.getElementById('mm').classList.toggle('open')"><i class="fa-solid fa-bars"></i></button>
 </div></div>
-<div class="mob-menu" id="mobMenu"><a href="#" onclick="go('home')">Ana Sayfa</a><a href="#" onclick="go('list')">Anime Listesi</a><a href="#" onclick="go('comm')">Topluluk</a></div>
+<div class="mob-menu" id="mm"><a href="#" onclick="go('home')">Ana Sayfa</a><a href="#" onclick="go('list')">Bolumler</a><a href="#" onclick="go('comm')">Topluluk</a></div>
 
-<!-- HOME -->
 <div class="pg on" id="pg-home">
-<section class="hero">
-<div class="hero-bg" style="background-image:url('https://i.pinimg.com/originals/54/a4/f5/54a4f5ec1d307588f5e6fca69894e944.jpg')"></div>
-<div class="hero-dark"></div>
-<div class="hero-info">
-<span class="hero-badge">YENI BOLUM</span>
-<h1>Jujutsu Kaisen</h1>
-<p>Lanetli enerjilerle dolu bir dunyada Yuji Itadori'nin mucadelesi! Turkce Dublaj ile izle.</p>
+<section class="hero"><div class="hero-bg"></div><div class="hero-dark"></div>
+<div class="hero-info"><span class="hero-badge">TURKCE DUBLAJ</span><h1>Jujutsu Kaisen</h1><p>Lanetli enerjilerle dolu bir dunyada Yuji Itadori'nin mucadelesi! Turkce Dublaj ile izle.</p>
 <div class="hero-meta"><span><i class="fa-solid fa-star"></i> 9.3</span><span><i class="fa-solid fa-clock"></i> 24dk</span></div>
-<div class="hero-btns">
-<button class="btn btn-p btn-l" onclick="go('watch')"><i class="fa-solid fa-play"></i> Izle</button>
-<button class="btn btn-g btn-l" onclick="go('detail')">Detay</button>
-</div>
-</div>
-</section>
-
-<section class="sec"><div class="box">
-<div class="sec-head"><h2>Son Eklenenler</h2></div>
-<div class="grid" id="gridLatest"></div>
+<div class="hero-btns"><button class="btn btn-p btn-l" onclick="go('watch')"><i class="fa-solid fa-play"></i> Izle</button><button class="btn btn-g btn-l" onclick="go('detail')">Detay</button></div>
 </div></section>
 
-<section class="sec sec-dark"><div class="box">
-<div class="sec-head"><h2>Tum Bolumler</h2></div>
-<div class="grid" id="gridAll"></div>
-</div></section>
+<section class="sec"><div class="box"><div class="sec-head"><h2>Son Eklenenler</h2></div><div class="grid" id="g1"></div></div></section>
+<section class="sec sec-dark"><div class="box"><div class="sec-head"><h2>Tum Bolumler</h2></div><div class="grid" id="g2"></div></div></section>
 </div>
 
-<!-- LIST -->
 <div class="pg" id="pg-list">
-<div class="pg-banner"><h1>Anime Listesi</h1><p>Jujutsu Kaisen - Tum Bolumler</p></div>
-<div class="box" style="padding-top:20px"><div class="grid" id="gridList"></div></div>
+<div class="pg-banner"><img src="banner.jpg" alt=""><h1>Jujutsu Kaisen</h1><p>Tum Bolumler - Turkce Dublaj</p></div>
+<div class="box" style="padding-top:20px"><div class="grid" id="g3"></div></div>
 </div>
 
-<!-- DETAIL -->
 <div class="pg" id="pg-detail">
 <div class="detail-top"><div class="box detail-flex">
-<div class="detail-poster"><img src="https://i.pinimg.com/originals/54/a4/f5/54a4f5ec1d307588f5e6fca69894e944.jpg" alt="JJK"></div>
-<div class="detail-text">
-<h1>Jujutsu Kaisen</h1>
+<div class="detail-poster"><img src="card.jpg" alt=""></div>
+<div class="detail-text"><h1>Jujutsu Kaisen</h1>
 <div class="detail-tags"><span>Aksiyon</span><span>2020</span><span>24 Bolum</span><span>Devam Ediyor</span></div>
 <p class="detail-desc">Yuji Itadori siradan bir lise ogrencisiyken lanetli bir nesneyi yutarak Ryomen Sukuna'nin ev sahibi olur. Jujutsu buyuculeri dunyasina adim atar.</p>
-<div class="detail-btns">
-<button class="btn btn-p btn-l" onclick="go('watch')"><i class="fa-solid fa-play"></i> Izle</button>
-<button class="btn btn-g btn-l" onclick="toggleFav(this)"><i class="fa-regular fa-heart"></i> Favorile</button>
-</div>
+<div class="detail-btns"><button class="btn btn-p btn-l" onclick="go('watch')"><i class="fa-solid fa-play"></i> Izle</button><button class="btn btn-g btn-l" onclick="togFav(this)"><i class="fa-regular fa-heart"></i> Favorile</button></div>
 </div></div></div>
 <div class="box" style="padding-top:30px">
 <h2 style="font-size:1.1rem;margin-bottom:16px">Bolumler</h2>
-<div class="ep-grid" id="epGrid"></div>
+<div class="ep-grid" id="eg"></div>
 <div class="cmt-section"><h2 style="font-size:1.1rem;margin-bottom:16px">Yorumlar</h2>
-<div class="cmt-form" id="cmtForm" style="display:none"><textarea id="cmtInput" placeholder="Yorumunuzu yazin..."></textarea><div class="cmt-send"><button class="btn btn-p btn-s" onclick="postCmt()">Gonder</button></div></div>
-<div id="cmtList"></div></div>
-</div></div>
+<div class="cmt-form" id="cf" style="display:none"><textarea id="ci" placeholder="Yorumunuzu yazin..."></textarea><div class="cmt-send"><button class="btn btn-p btn-s" onclick="postC()">Gonder</button></div></div>
+<div id="cl"></div></div></div></div>
 
-<!-- WATCH -->
 <div class="pg" id="pg-watch">
 <div class="watch-wrap"><div class="watch-main">
-<div class="player"><video id="vid" controls></video><div class="player-ov" id="vidOv" onclick="this.classList.add('hide')"><div class="play-big"><i class="fa-solid fa-play"></i></div></div></div>
-<div class="watch-info"><div class="watch-head"><h2 id="watchTitle">Jujutsu Kaisen - Bolum 1</h2><div class="w-acts"><button onclick="toast('Begenildi','ok')"><i class="fa-regular fa-thumbs-up"></i></button><button><i class="fa-solid fa-download"></i></button></div></div>
+<div class="player"><video id="vid" controls></video><div class="player-ov" id="vo" onclick="this.classList.add('hide')"><div class="play-big"><i class="fa-solid fa-play"></i></div></div></div>
+<div class="watch-info"><div class="watch-head"><h2 id="wt">Jujutsu Kaisen - Bolum 1</h2><div class="w-acts"><button onclick="toast('Begenildi','ok')"><i class="fa-regular fa-thumbs-up"></i></button><button><i class="fa-solid fa-download"></i></button></div></div>
 <div class="w-nav"><button class="btn btn-g btn-s" onclick="chEp(-1)">Onceki</button><button class="btn btn-p btn-s" onclick="chEp(1)">Sonraki</button></div></div>
-</div><div class="watch-side"><h3>Bolumler</h3><div id="wEpList"></div></div></div>
-</div>
+</div><div class="watch-side"><h3>Bolumler</h3><div id="wl"></div></div></div></div>
 
-<!-- COMMUNITY -->
 <div class="pg" id="pg-comm">
-<div class="pg-banner"><h1>Topluluk</h1><p>Anime severlerle tanisip tartis!</p></div>
+<div class="pg-banner"><img src="banner.jpg" alt=""><h1>Topluluk</h1><p>Anime severlerle tanisip tartis!</p></div>
 <div class="box"><div class="comm-wrap"><div class="comm-main">
-<div class="post-box" id="postBox" style="display:none"><textarea id="postInput" placeholder="Bir seyler paylas..."></textarea><div class="post-box-foot"><button class="btn btn-p btn-s" onclick="createPost()">Paylas</button></div></div>
-<div id="postList"></div></div>
-<div class="comm-side"><div class="side-card"><h3>Trend Konular</h3><div id="trends"></div></div></div>
+<div class="post-box" id="pb" style="display:none"><textarea id="pi" placeholder="Bir seyler paylas..."></textarea><div class="post-box-foot"><button class="btn btn-p btn-s" onclick="newPost()">Paylas</button></div></div>
+<div id="pl"></div></div>
+<div class="comm-side"><div class="side-card"><h3>Trend Konular</h3><div id="tr"></div></div></div>
 </div></div></div>
 
-<!-- PROFILE -->
 <div class="pg" id="pg-profile">
-<div class="prof-top"><div class="box prof-head"><div class="prof-ava" id="profAva">?</div><div class="prof-info"><h1 id="profName">Kullanici</h1><p>Anime sever</p></div></div></div>
-</div>
+<div class="prof-top"><div class="box prof-head"><div class="prof-ava" id="pa">?</div><div class="prof-info"><h1 id="pn">Kullanici</h1><p>Anime sever</p></div></div></div></div>
 
-<!-- SETTINGS -->
 <div class="pg" id="pg-settings">
 <div class="box set-wrap"><h1>Ayarlar</h1>
-<div class="f-row"><label>Kullanici Adi</label><input type="text" class="f-input" id="setName"></div>
-<div class="f-row"><label>E-posta</label><input type="email" class="f-input" id="setEmail"></div>
-<button class="btn btn-p" onclick="saveSets()">Kaydet</button>
-</div></div>
+<div class="f-row"><label>Kullanici Adi</label><input type="text" class="f-input" id="sn"></div>
+<div class="f-row"><label>E-posta</label><input type="email" class="f-input" id="se"></div>
+<button class="btn btn-p" onclick="saveS()">Kaydet</button></div></div>
 
-<!-- MODALS -->
-<div class="modal" id="loginModal"><div class="m-box"><button class="m-close" onclick="closeModal('loginModal')"><i class="fa-solid fa-xmark"></i></button><div class="m-head"><h2>Giris Yap</h2></div><form onsubmit="doLogin(event)"><div class="f-row"><label>E-posta</label><input type="email" class="f-input" id="logEmail" required></div><div class="f-row"><label>Sifre</label><input type="password" class="f-input" id="logPass" required></div><button type="submit" class="btn btn-p btn-f">Giris Yap</button></form><div class="m-foot">Hesabin yok mu? <a onclick="closeModal('loginModal');openModal('regModal')">Kayit Ol</a></div></div></div>
+<div class="modal" id="lm"><div class="m-box"><button class="m-close" onclick="closeM('lm')"><i class="fa-solid fa-xmark"></i></button><div class="m-head"><h2>Giris Yap</h2></div><form onsubmit="doLog(event)"><div class="f-row"><label>E-posta</label><input type="email" class="f-input" id="le" required></div><div class="f-row"><label>Sifre</label><input type="password" class="f-input" id="lp" required></div><button type="submit" class="btn btn-p btn-f">Giris Yap</button></form><div class="m-foot">Hesabin yok mu? <a onclick="closeM('lm');openM('rm')">Kayit Ol</a></div></div></div>
 
-<div class="modal" id="regModal"><div class="m-box"><button class="m-close" onclick="closeModal('regModal')"><i class="fa-solid fa-xmark"></i></button><div class="m-head"><h2>Kayit Ol</h2></div><form onsubmit="doReg(event)"><div class="f-row"><label>Kullanici Adi</label><input type="text" class="f-input" id="regName" required></div><div class="f-row"><label>E-posta</label><input type="email" class="f-input" id="regEmail" required></div><div class="f-row"><label>Sifre</label><input type="password" class="f-input" id="regPass" required></div><div class="f-row"><label>Sifre Tekrar</label><input type="password" class="f-input" id="regPass2" required></div><button type="submit" class="btn btn-p btn-f">Kayit Ol</button></form><div class="m-foot">Hesabin var mi? <a onclick="closeModal('regModal');openModal('loginModal')">Giris Yap</a></div></div></div>
+<div class="modal" id="rm"><div class="m-box"><button class="m-close" onclick="closeM('rm')"><i class="fa-solid fa-xmark"></i></button><div class="m-head"><h2>Kayit Ol</h2></div><form onsubmit="doReg(event)"><div class="f-row"><label>Kullanici Adi</label><input type="text" class="f-input" id="rn" required></div><div class="f-row"><label>E-posta</label><input type="email" class="f-input" id="re" required></div><div class="f-row"><label>Sifre</label><input type="password" class="f-input" id="rp" required></div><div class="f-row"><label>Sifre Tekrar</label><input type="password" class="f-input" id="rp2" required></div><button type="submit" class="btn btn-p btn-f">Kayit Ol</button></form><div class="m-foot">Hesabin var mi? <a onclick="closeM('rm');openM('lm')">Giris Yap</a></div></div></div>
 
-<div class="toast-wrap" id="toastWrap"></div>
+<div class="toast-wrap" id="tw"></div>
 
 <footer class="footer"><div class="box"><div class="foot-grid">
-<div class="foot-col"><div class="foot-logo"><img src="https://i.pinimg.com/736x/29/60/55/296055037af498e60024e498046c498b.jpg" alt="">Gals<b>Manime</b></div><p>Turkce anime dublaj platformu.</p><div class="socials"><a href="#"><i class="fa-brands fa-discord"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-youtube"></i></a></div></div>
-<div class="foot-col"><h3>Linkler</h3><ul><li><a href="#" onclick="go('home')">Ana Sayfa</a></li><li><a href="#" onclick="go('list')">Anime Listesi</a></li><li><a href="#" onclick="go('comm')">Topluluk</a></li></ul></div>
-<div class="foot-col"><h3>Turler</h3><ul><li><a href="#">Aksiyon</a></li><li><a href="#">Fantezi</a></li><li><a href="#">Gerilim</a></li></ul></div>
+<div class="foot-col"><div class="foot-logo"><img src="icon.jpg" alt="">Gals<b>manime</b></div><p>Turkce anime dublaj platformu.</p><div class="socials"><a href="#"><i class="fa-brands fa-discord"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-youtube"></i></a></div></div>
+<div class="foot-col"><h3>Linkler</h3><ul><li><a href="#" onclick="go('home')">Ana Sayfa</a></li><li><a href="#" onclick="go('list')">Bolumler</a></li><li><a href="#" onclick="go('comm')">Topluluk</a></li></ul></div>
 <div class="foot-col"><h3>Destek</h3><ul><li><a href="#">SSS</a></li><li><a href="#">Iletisim</a></li><li><a href="#">Gizlilik</a></li></ul></div>
-</div><div class="foot-bottom">2024 GalsManime. Tum haklari saklidir.</div></div></footer>
+</div><div class="foot-bottom">2024 Galsmanime. Tum haklari saklidir.</div></div></footer>
 
 <script>
-var jjkImg="https://i.pinimg.com/originals/54/a4/f5/54a4f5ec1d307588f5e6fca69894e944.jpg";
-var jjkThumb="https://i.pinimg.com/736x/e0/3e/01/e03e016e1ed36a1e04e4dbb4fca1cac5.jpg";
-var curEp=1;
-var cmts=[];
-var posts=[
+var ce=1,cmts=[],posts=[
 {u:"JJKFan",t:"Jujutsu Kaisen dublaji muhtesem olmus! Gojo'nun sesi cok uygun.",d:"2 saat once",l:24},
 {u:"AnimeKral",t:"Sukuna vs Gojo savasi icin sabrsizlaniyorum!",d:"5 saat once",l:18},
-{u:"OtakuTR",t:"Yuji'nin karakter gelisimi cok iyi islenmi. Bravo ekibe!",d:"1 gun once",l:32}
-];
-var user=JSON.parse(localStorage.getItem("gmUser"))||null;
+{u:"OtakuTR",t:"Yuji'nin karakter gelisimi cok iyi islenmis!",d:"1 gun once",l:32}
+],user=JSON.parse(localStorage.getItem("gmU"))||null;
 
-function makeCard(ep){
-return '<div class="card" onclick="go(\'detail\')"><div class="card-img"><img src="'+jjkImg+'" alt="JJK"><div class="card-hover"><div class="card-play"><i class="fa-solid fa-play"></i></div></div><span class="card-badge">Bolum '+ep+'</span><span class="card-rate"><i class="fa-solid fa-star"></i> 9.3</span></div><div class="card-info"><h3>Jujutsu Kaisen</h3><div class="genre">Aksiyon - Bolum '+ep+'</div><div class="meta"><span>Turkce Dublaj</span><span>24dk</span></div></div></div>';
-}
+function mc(ep){return'<div class="card" onclick="go(\'detail\')"><div class="card-img"><img src="card.jpg" alt="JJK"><div class="card-hover"><div class="card-play"><i class="fa-solid fa-play"></i></div></div><span class="card-badge">Bolum '+ep+'</span><span class="card-rate"><i class="fa-solid fa-star"></i> 9.3</span></div><div class="card-info"><h3>Jujutsu Kaisen</h3><div class="genre">Aksiyon - Bolum '+ep+'</div><div class="meta"><span>Turkce Dublaj</span><span>24dk</span></div></div></div>';}
 
-function renderGrids(){
-var h="";for(var i=1;i<=6;i++)h+=makeCard(i);
-document.getElementById("gridLatest").innerHTML=h;
-var h2="";for(var i=1;i<=24;i++)h2+=makeCard(i);
-document.getElementById("gridAll").innerHTML=h2;
-document.getElementById("gridList").innerHTML=h2;
-}
+function init(){
+var h1="",h2="",h3="";
+for(var i=1;i<=6;i++)h1+=mc(i);
+for(var i=1;i<=24;i++){h2+=mc(i);h3+=mc(i);}
+document.getElementById("g1").innerHTML=h1;
+document.getElementById("g2").innerHTML=h2;
+document.getElementById("g3").innerHTML=h3;
 
-function renderEps(){
-var h="",w="";
+var eh="",wh="";
 for(var i=1;i<=24;i++){
-h+='<div class="ep-card'+(i===1?" on":"")+'" onclick="goEp('+i+')"><div class="ep-thumb"><img src="'+jjkThumb+'" alt=""></div><div class="ep-info"><h4>Bolum '+i+'</h4><p>Turkce Dublaj - 24dk</p></div></div>';
-w+='<div class="ep-list-item'+(i===1?" on":"")+'" onclick="goEp('+i+')">Bolum '+i+' - 24dk</div>';
+eh+='<div class="ep-card'+(i===1?" on":"")+'" onclick="goEp('+i+')"><div class="ep-thumb"><img src="card.jpg" alt=""></div><div class="ep-info"><h4>Bolum '+i+'</h4><p>Turkce Dublaj - 24dk</p></div></div>';
+wh+='<div class="ep-list-item'+(i===1?" on":"")+'" onclick="goEp('+i+')">Bolum '+i+' - 24dk</div>';
 }
-document.getElementById("epGrid").innerHTML=h;
-document.getElementById("wEpList").innerHTML=w;
-}
+document.getElementById("eg").innerHTML=eh;
+document.getElementById("wl").innerHTML=wh;
 
-function goEp(n){
-curEp=n;
-document.getElementById("watchTitle").textContent="Jujutsu Kaisen - Bolum "+n;
-document.getElementById("vidOv").classList.remove("hide");
-var items=document.querySelectorAll(".ep-list-item");
-for(var i=0;i<items.length;i++){items[i].classList.remove("on");if(i===n-1)items[i].classList.add("on");}
-go("watch");
-}
-function chEp(d){var n=curEp+d;if(n>=1&&n<=24)goEp(n);else toast("Bolum yok","err");}
+var ph="";for(var i=0;i<posts.length;i++){var p=posts[i];ph+='<div class="post"><div class="post-header"><div class="post-ava">'+p.u[0]+'</div><div><h4>'+p.u+'</h4><span>'+p.d+'</span></div></div><div class="post-text">'+p.t+'</div><div class="post-foot"><button onclick="this.textContent=parseInt(this.textContent||0)+1"><i class="fa-regular fa-heart"></i> '+p.l+'</button><button><i class="fa-regular fa-comment"></i> Yorum</button></div></div>';}
+document.getElementById("pl").innerHTML=ph;
 
-function renderPosts(){
-var l=document.getElementById("postList");
-var h="";
-for(var i=0;i<posts.length;i++){
-var p=posts[i];
-h+='<div class="post"><div class="post-header"><div class="post-ava">'+p.u[0]+'</div><div><h4>'+p.u+'</h4><span>'+p.d+'</span></div></div><div class="post-text">'+p.t+'</div><div class="post-foot"><button onclick="this.innerHTML=\'<i class=fa-solid&nbsp;fa-heart></i> \'+(parseInt(this.textContent||0)+1)"><i class="fa-regular fa-heart"></i> '+p.l+'</button><button><i class="fa-regular fa-comment"></i> Yorum</button></div></div>';
-}
-l.innerHTML=h;
+document.getElementById("tr").innerHTML=["#JujutsuKaisen","#Gojo","#Sukuna","#TurkceDublaj","#Galsmanime"].map(function(t){return'<div style="padding:6px 0;font-size:.82rem;color:var(--p);cursor:pointer">'+t+'</div>';}).join("");
+
+renderC();updateUI();
+if(user){document.getElementById("sn").value=user.n||"";document.getElementById("se").value=user.e||"";}
 }
 
-function renderTrends(){
-document.getElementById("trends").innerHTML=["#JujutsuKaisen","#Gojo","#Sukuna","#TurkceDublaj","#GalsManime"].map(function(t){return'<div style="padding:6px 0;font-size:.82rem;color:var(--p);cursor:pointer">'+t+'</div>';}).join("");
-}
+function goEp(n){ce=n;document.getElementById("wt").textContent="Jujutsu Kaisen - Bolum "+n;document.getElementById("vo").classList.remove("hide");var it=document.querySelectorAll(".ep-list-item");for(var i=0;i<it.length;i++){it[i].classList.remove("on");if(i===n-1)it[i].classList.add("on");}go("watch");}
+function chEp(d){var n=ce+d;if(n>=1&&n<=24)goEp(n);else toast("Bolum yok","err");}
 
-function renderCmts(){
-var l=document.getElementById("cmtList");
-if(cmts.length===0){l.innerHTML='<p style="color:var(--t3);font-size:.84rem">Henuz yorum yok. Ilk yorumu sen yap!</p>';return;}
-var h="";
-for(var i=0;i<cmts.length;i++){var c=cmts[i];h+='<div class="cmt"><div class="cmt-ava">'+c.u[0]+'</div><div class="cmt-body"><div class="cmt-top"><span class="name">'+c.u+'</span><span class="date">'+c.d+'</span></div><div class="cmt-text">'+c.t+'</div></div></div>';}
-l.innerHTML=h;
-}
+function renderC(){var l=document.getElementById("cl");if(cmts.length===0){l.innerHTML='<p style="color:var(--t3);font-size:.84rem">Henuz yorum yok. Ilk yorumu sen yap!</p>';return;}var h="";for(var i=0;i<cmts.length;i++){var c=cmts[i];h+='<div class="cmt"><div class="cmt-ava">'+c.u[0]+'</div><div class="cmt-body"><div class="cmt-top"><span class="name">'+c.u+'</span><span class="date">'+c.d+'</span></div><div class="cmt-text">'+c.t+'</div></div></div>';}l.innerHTML=h;}
 
-function go(p){
-var all=document.querySelectorAll(".pg");for(var i=0;i<all.length;i++)all[i].classList.remove("on");
-var el=document.getElementById("pg-"+p);if(el)el.classList.add("on");
-var links=document.querySelectorAll(".nav-links a");for(var i=0;i<links.length;i++){links[i].classList.remove("on");if(links[i].getAttribute("data-p")===p)links[i].classList.add("on");}
-document.getElementById("mobMenu").classList.remove("open");
-document.getElementById("userDD").classList.remove("open");
-window.scrollTo(0,0);
-}
+function go(p){var a=document.querySelectorAll(".pg");for(var i=0;i<a.length;i++)a[i].classList.remove("on");var e=document.getElementById("pg-"+p);if(e)e.classList.add("on");var l=document.querySelectorAll(".nav-links a");for(var i=0;i<l.length;i++){l[i].classList.remove("on");if(l[i].getAttribute("data-p")===p)l[i].classList.add("on");}document.getElementById("mm").classList.remove("open");document.getElementById("dd").classList.remove("open");window.scrollTo(0,0);}
 
-function doSearch(){
-var v=document.getElementById("searchInput").value.toLowerCase();
-if(v.length>=2&&"jujutsu kaisen".indexOf(v)>=0)toast("Jujutsu Kaisen bulundu!","ok");
-}
+function doSearch(){var v=document.getElementById("si").value.toLowerCase();if(v.length>=2&&"jujutsu kaisen".indexOf(v)>=0)toast("Jujutsu Kaisen bulundu!","ok");}
 
-function updateUI(){
-var ab=document.getElementById("authBtns");var ub=document.getElementById("userBtn");var un=document.getElementById("userName");
-var cf=document.getElementById("cmtForm");var pb=document.getElementById("postBox");var pa=document.getElementById("profAva");var pn=document.getElementById("profName");
-if(user){ab.style.display="none";ub.style.display="flex";un.textContent=user.name;if(cf)cf.style.display="block";if(pb)pb.style.display="block";if(pa)pa.textContent=user.name[0].toUpperCase();if(pn)pn.textContent=user.name;}
-else{ab.style.display="flex";ub.style.display="none";if(cf)cf.style.display="none";if(pb)pb.style.display="none";}
-}
+function updateUI(){var a=document.getElementById("ab"),u=document.getElementById("ub"),n=document.getElementById("un"),cf=document.getElementById("cf"),pb=document.getElementById("pb"),pa=document.getElementById("pa"),pn=document.getElementById("pn");if(user){a.style.display="none";u.style.display="flex";n.textContent=user.n;if(cf)cf.style.display="block";if(pb)pb.style.display="block";if(pa)pa.textContent=user.n[0].toUpperCase();if(pn)pn.textContent=user.n;}else{a.style.display="flex";u.style.display="none";if(cf)cf.style.display="none";if(pb)pb.style.display="none";}}
 
-function doLogin(e){e.preventDefault();var email=document.getElementById("logEmail").value;var pass=document.getElementById("logPass").value;var users=JSON.parse(localStorage.getItem("gmUsers")||"[]");var found=null;for(var i=0;i<users.length;i++){if(users[i].email===email&&users[i].pass===pass)found=users[i];}if(found){user=found;localStorage.setItem("gmUser",JSON.stringify(user));closeModal("loginModal");updateUI();toast("Giris basarili!","ok");}else{toast("Email veya sifre yanlis","err");}}
+function doLog(e){e.preventDefault();var em=document.getElementById("le").value,pw=document.getElementById("lp").value,us=JSON.parse(localStorage.getItem("gmUs")||"[]"),f=null;for(var i=0;i<us.length;i++){if(us[i].e===em&&us[i].p===pw)f=us[i];}if(f){user=f;localStorage.setItem("gmU",JSON.stringify(user));closeM("lm");updateUI();toast("Giris basarili!","ok");}else toast("Email veya sifre yanlis","err");}
 
-function doReg(e){e.preventDefault();var name=document.getElementById("regName").value;var email=document.getElementById("regEmail").value;var pass=document.getElementById("regPass").value;var pass2=document.getElementById("regPass2").value;if(pass!==pass2){toast("Sifreler eslesmiyor","err");return;}if(pass.length<4){toast("Sifre en az 4 karakter","err");return;}var users=JSON.parse(localStorage.getItem("gmUsers")||"[]");for(var i=0;i<users.length;i++){if(users[i].email===email){toast("Bu email kayitli","err");return;}}var u={name:name,email:email,pass:pass};users.push(u);localStorage.setItem("gmUsers",JSON.stringify(users));user=u;localStorage.setItem("gmUser",JSON.stringify(u));closeModal("regModal");updateUI();toast("Kayit basarili!","ok");}
+function doReg(e){e.preventDefault();var nm=document.getElementById("rn").value,em=document.getElementById("re").value,pw=document.getElementById("rp").value,pw2=document.getElementById("rp2").value;if(pw!==pw2){toast("Sifreler eslesmiyor","err");return;}if(pw.length<4){toast("Sifre en az 4 karakter","err");return;}var us=JSON.parse(localStorage.getItem("gmUs")||"[]");for(var i=0;i<us.length;i++){if(us[i].e===em){toast("Bu email kayitli","err");return;}}var u={n:nm,e:em,p:pw};us.push(u);localStorage.setItem("gmUs",JSON.stringify(us));user=u;localStorage.setItem("gmU",JSON.stringify(u));closeM("rm");updateUI();toast("Kayit basarili!","ok");}
 
-function doLogout(){user=null;localStorage.removeItem("gmUser");document.getElementById("userDD").classList.remove("open");updateUI();toast("Cikis yapildi","ok");}
-function saveSets(){if(!user){toast("Giris yapin","err");return;}var n=document.getElementById("setName").value;var e=document.getElementById("setEmail").value;if(n)user.name=n;if(e)user.email=e;localStorage.setItem("gmUser",JSON.stringify(user));updateUI();toast("Kaydedildi","ok");}
+function logout(){user=null;localStorage.removeItem("gmU");document.getElementById("dd").classList.remove("open");updateUI();toast("Cikis yapildi","ok");}
+function saveS(){if(!user){toast("Giris yapin","err");return;}var n=document.getElementById("sn").value,e=document.getElementById("se").value;if(n)user.n=n;if(e)user.e=e;localStorage.setItem("gmU",JSON.stringify(user));updateUI();toast("Kaydedildi","ok");}
+function postC(){if(!user){toast("Giris yapin","err");openM("lm");return;}var t=document.getElementById("ci").value.trim();if(!t){toast("Yorum yazin","err");return;}cmts.unshift({u:user.n,t:t,d:"Simdi"});document.getElementById("ci").value="";renderC();toast("Yorum eklendi","ok");}
+function newPost(){if(!user){toast("Giris yapin","err");return;}var t=document.getElementById("pi").value.trim();if(!t){toast("Bir seyler yazin","err");return;}posts.unshift({u:user.n,t:t,d:"Simdi",l:0});document.getElementById("pi").value="";init();toast("Paylasim yapildi","ok");}
+function togFav(b){if(!user){toast("Giris yapin","err");openM("lm");return;}b.innerHTML='<i class="fa-solid fa-heart" style="color:var(--p)"></i> Favorilerde';toast("Favorilere eklendi","ok");}
 
-function postCmt(){if(!user){toast("Giris yapin","err");openModal("loginModal");return;}var t=document.getElementById("cmtInput").value.trim();if(!t){toast("Yorum yazin","err");return;}cmts.unshift({u:user.name,t:t,d:"Simdi"});document.getElementById("cmtInput").value="";renderCmts();toast("Yorum eklendi","ok");}
+function openM(id){document.getElementById(id).classList.add("open");}
+function closeM(id){document.getElementById(id).classList.remove("open");}
+function toast(m,t){var w=document.getElementById("tw"),d=document.createElement("div");d.className="toast "+(t||"ok");d.textContent=m;w.appendChild(d);setTimeout(function(){d.remove();},3000);}
+document.addEventListener("click",function(e){if(!e.target.closest(".user-btn")&&!e.target.closest(".dropdown"))document.getElementById("dd").classList.remove("open");});
 
-function createPost(){if(!user){toast("Giris yapin","err");return;}var t=document.getElementById("postInput").value.trim();if(!t){toast("Bir seyler yazin","err");return;}posts.unshift({u:user.name,t:t,d:"Simdi",l:0});document.getElementById("postInput").value="";renderPosts();toast("Paylasim yapildi","ok");}
-
-function toggleFav(btn){if(!user){toast("Giris yapin","err");openModal("loginModal");return;}btn.innerHTML='<i class="fa-solid fa-heart" style="color:var(--p)"></i> Favorilerde';toast("Favorilere eklendi","ok");}
-
-function openModal(id){document.getElementById(id).classList.add("open");}
-function closeModal(id){document.getElementById(id).classList.remove("open");}
-function toast(msg,type){var w=document.getElementById("toastWrap");var t=document.createElement("div");t.className="toast "+(type||"ok");t.textContent=msg;w.appendChild(t);setTimeout(function(){t.remove();},3000);}
-
-document.addEventListener("click",function(e){if(!e.target.closest(".user-btn")&&!e.target.closest(".dropdown"))document.getElementById("userDD").classList.remove("open");});
-
-renderGrids();renderEps();renderPosts();renderTrends();renderCmts();updateUI();
-if(user){document.getElementById("setName").value=user.name||"";document.getElementById("setEmail").value=user.email||"";}
+init();
 </script>
 </body>
 </html>
