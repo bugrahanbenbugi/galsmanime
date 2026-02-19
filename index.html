@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AnimeDub TR</title>
+<title>GalsManime</title>
+<link rel="icon" href="https://i.pinimg.com/736x/29/60/55/296055037af498e60024e498046c498b.jpg" type="image/jpeg">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
@@ -19,14 +20,12 @@ input,select,textarea{font-family:inherit;outline:none}
 .btn-s{padding:6px 14px;font-size:.78rem}
 .btn-l{padding:12px 26px;font-size:.95rem}
 .btn-f{width:100%;justify-content:center}
-.btn-p{background:var(--p);color:#fff}
-.btn-p:hover{filter:brightness(1.15)}
-.btn-g{background:rgba(255,255,255,.04);color:var(--t);border:1px solid var(--bd2)}
-.btn-g:hover{border-color:var(--p);color:var(--p)}
+.btn-p{background:var(--p);color:#fff}.btn-p:hover{filter:brightness(1.15)}
+.btn-g{background:rgba(255,255,255,.04);color:var(--t);border:1px solid var(--bd2)}.btn-g:hover{border-color:var(--p);color:var(--p)}
 
-/* NAV */
 .nav{position:fixed;top:0;left:0;right:0;height:var(--nv);background:rgba(6,6,14,.94);backdrop-filter:blur(16px);border-bottom:1px solid var(--bd);z-index:9000;display:flex;align-items:center;padding:0 20px;gap:16px}
-.nav-logo{font-size:1.15rem;font-weight:800;cursor:pointer;flex-shrink:0}
+.nav-logo{display:flex;align-items:center;gap:10px;font-size:1.15rem;font-weight:800;cursor:pointer;flex-shrink:0}
+.nav-logo img{width:36px;height:36px;border-radius:50%;object-fit:cover;border:2px solid var(--p)}
 .nav-logo b{color:var(--p)}
 .nav-search{flex:1;max-width:340px;position:relative}
 .nav-search input{width:100%;padding:8px 36px 8px 14px;background:var(--c);border:1px solid var(--bd);border-radius:50px;color:var(--t);font-size:.83rem}
@@ -50,52 +49,29 @@ input,select,textarea{font-family:inherit;outline:none}
 .mob-menu a{padding:11px;color:var(--t2);border-radius:8px;font-size:.88rem}
 .mob-menu a:hover{background:var(--pg);color:var(--p)}
 
-/* HERO */
 .hero{position:relative;height:70vh;min-height:400px;max-height:600px;margin-top:var(--nv);overflow:hidden;background:var(--b2)}
-.slide{position:absolute;inset:0;opacity:0;transition:opacity .7s}
-.slide.on{opacity:1}
-.slide-dark{position:absolute;inset:0;background:linear-gradient(100deg,rgba(6,6,14,.94) 0%,rgba(6,6,14,.5) 55%,rgba(6,6,14,.3) 100%)}
-.slide-info{position:absolute;bottom:12%;left:5%;max-width:520px;z-index:2}
-.slide-badge{display:inline-block;padding:4px 13px;border-radius:50px;font-size:.7rem;font-weight:700;margin-bottom:12px;color:#fff}
-.slide-badge.red{background:var(--p)}
-.slide-badge.hot{background:#ef4444}
-.slide-badge.purple{background:#8338ec}
-.slide-info h1{font-size:2.4rem;font-weight:900;line-height:1.1;margin-bottom:10px}
-.slide-info p{color:var(--t2);font-size:.9rem;margin-bottom:16px}
-.slide-meta{display:flex;gap:16px;margin-bottom:18px}
-.slide-meta span{display:flex;align-items:center;gap:4px;font-size:.82rem;color:var(--t2)}
-.slide-meta .fa-star{color:var(--p)}
-.slide-btns{display:flex;gap:10px}
-.s-arr{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.06);color:#fff;display:flex;align-items:center;justify-content:center;z-index:5;font-size:.9rem;border:1px solid rgba(255,255,255,.08)}
-.s-arr:hover{background:var(--p);border-color:var(--p)}
-.s-arr.left{left:16px}.s-arr.right{right:16px}
-.s-dots{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:5}
-.s-dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.2);cursor:pointer;transition:.25s}
-.s-dot.on{background:var(--p);width:24px;border-radius:8px}
+.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center}
+.hero-dark{position:absolute;inset:0;background:linear-gradient(100deg,rgba(6,6,14,.94) 0%,rgba(6,6,14,.5) 55%,rgba(6,6,14,.3) 100%)}
+.hero-info{position:absolute;bottom:12%;left:5%;max-width:520px;z-index:2}
+.hero-badge{display:inline-block;padding:4px 13px;border-radius:50px;font-size:.7rem;font-weight:700;margin-bottom:12px;color:#fff;background:var(--p)}
+.hero-info h1{font-size:2.4rem;font-weight:900;line-height:1.1;margin-bottom:10px}
+.hero-info p{color:var(--t2);font-size:.9rem;margin-bottom:16px}
+.hero-meta{display:flex;gap:16px;margin-bottom:18px}
+.hero-meta span{display:flex;align-items:center;gap:4px;font-size:.82rem;color:var(--t2)}
+.hero-meta .fa-star{color:var(--p)}
+.hero-btns{display:flex;gap:10px}
 
-/* STATS */
-.stats{background:var(--b2);padding:22px 0;border-bottom:1px solid var(--bd)}
-.stats-row{display:flex;justify-content:space-around;flex-wrap:wrap;gap:16px}
-.stat{display:flex;align-items:center;gap:12px}
-.stat i{font-size:1.4rem;color:var(--p)}
-.stat-num{font-size:1.2rem;font-weight:800;display:block}
-.stat-lbl{font-size:.7rem;color:var(--t3);text-transform:uppercase}
-
-/* SECTION */
 .sec{padding:50px 0}
 .sec-dark{background:var(--b2)}
-.sec-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:26px;flex-wrap:wrap;gap:12px}
+.sec-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:26px}
 .sec-head h2{font-size:1.15rem;font-weight:700}
-.sec-head .more{color:var(--p);font-size:.82rem;font-weight:600;cursor:pointer}
-.tabs{display:flex;gap:6px;flex-wrap:wrap}
-.tab{padding:6px 16px;border-radius:50px;background:var(--c);color:var(--t2);font-size:.8rem;font-weight:500;border:1px solid var(--bd)}
-.tab.on,.tab:hover{background:var(--p);color:#fff;border-color:var(--p)}
 
-/* CARDS */
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:18px}
 .card{background:var(--c);border-radius:var(--r);overflow:hidden;border:1px solid var(--bd);transition:.25s;cursor:pointer}
 .card:hover{transform:translateY(-5px);border-color:var(--p);box-shadow:0 10px 25px rgba(230,57,70,.08)}
 .card-img{position:relative;padding-top:140%;background:var(--b3);overflow:hidden}
+.card-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:.25s}
+.card:hover .card-img img{transform:scale(1.05)}
 .card-hover{position:absolute;inset:0;background:rgba(0,0,0,.5);display:flex;align-items:center;justify-content:center;opacity:0;transition:.25s}
 .card:hover .card-hover{opacity:1}
 .card-play{width:46px;height:46px;border-radius:50%;background:var(--p);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1rem;transform:scale(0);transition:.25s}
@@ -103,55 +79,29 @@ input,select,textarea{font-family:inherit;outline:none}
 .card-badge{position:absolute;top:8px;left:8px;padding:3px 9px;border-radius:50px;font-size:.65rem;font-weight:700;z-index:2;background:var(--p);color:#fff}
 .card-rate{position:absolute;top:8px;right:8px;background:rgba(0,0,0,.65);color:var(--p);padding:2px 7px;border-radius:50px;font-size:.7rem;font-weight:700;z-index:2}
 .card-info{padding:12px}
-.card-info h3{font-size:.84rem;font-weight:600;margin-bottom:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.card-info h3{font-size:.84rem;font-weight:600;margin-bottom:3px}
 .card-info .genre{font-size:.68rem;color:var(--t3)}
 .card-info .meta{display:flex;justify-content:space-between;font-size:.68rem;color:var(--t2);margin-top:5px}
 
-.scroll-row{display:flex;gap:18px;overflow-x:auto;padding-bottom:10px}
-.scroll-row::-webkit-scrollbar{height:4px}
-.scroll-row::-webkit-scrollbar-thumb{background:var(--p);border-radius:4px}
-.scroll-row .card{min-width:170px;flex-shrink:0}
-
-/* SCHEDULE */
-.sched{display:grid;grid-template-columns:repeat(7,1fr);gap:10px}
-.sched-day{background:var(--c);border-radius:var(--r);overflow:hidden;border:1px solid var(--bd)}
-.sched-day.today{border-color:var(--p)}
-.sched-head{padding:10px;text-align:center;font-weight:700;font-size:.78rem;background:var(--b3)}
-.sched-day.today .sched-head{background:var(--p);color:#fff}
-.sched-item{padding:8px;border-bottom:1px solid var(--bd);font-size:.72rem;cursor:pointer}
-.sched-item:hover{background:var(--c2)}
-
-/* PAGE BANNER */
-.pg-banner{height:220px;display:flex;flex-direction:column;align-items:center;justify-content:center;margin-top:var(--nv);background:var(--b3)}
-.pg-banner h1{font-size:1.8rem;font-weight:900}
-.pg-banner p{color:var(--t2);font-size:.9rem}
-
-/* FILTERS */
-.filters{display:flex;align-items:center;gap:16px;padding:20px 0;border-bottom:1px solid var(--bd);margin-bottom:24px;flex-wrap:wrap}
-.f-group{display:flex;align-items:center;gap:6px}
-.f-group label{font-size:.8rem;font-weight:600;color:var(--t2)}
-.f-group select{padding:7px 12px;background:var(--c);border:1px solid var(--bd);border-radius:8px;color:var(--t);font-size:.82rem}
-
-/* DETAIL */
 .detail-top{padding:100px 0 40px;background:var(--b2);margin-top:var(--nv)}
 .detail-flex{display:flex;gap:24px;align-items:flex-end}
-.detail-poster{width:180px;height:250px;border-radius:var(--r);background:var(--b3);flex-shrink:0;border:2px solid var(--bd)}
+.detail-poster{width:180px;height:250px;border-radius:var(--r);overflow:hidden;flex-shrink:0;border:2px solid var(--bd)}
+.detail-poster img{width:100%;height:100%;object-fit:cover}
 .detail-text h1{font-size:1.8rem;font-weight:900;margin-bottom:8px}
 .detail-tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
 .detail-tags span{padding:3px 10px;background:rgba(255,255,255,.05);border-radius:50px;font-size:.73rem;color:var(--t2)}
 .detail-desc{color:var(--t2);font-size:.86rem;margin-bottom:14px;max-width:500px}
 .detail-btns{display:flex;gap:10px;flex-wrap:wrap}
 
-/* EPISODES */
 .ep-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px;margin-bottom:30px}
 .ep-card{display:flex;gap:10px;padding:12px;background:var(--c);border-radius:var(--r);border:1px solid var(--bd);cursor:pointer;transition:.25s}
 .ep-card:hover{border-color:var(--p);background:var(--c2)}
 .ep-card.on{border-color:var(--p);background:var(--pg)}
-.ep-thumb{width:90px;height:58px;border-radius:8px;background:var(--b3);flex-shrink:0}
+.ep-thumb{width:90px;height:58px;border-radius:8px;overflow:hidden;flex-shrink:0}
+.ep-thumb img{width:100%;height:100%;object-fit:cover}
 .ep-info h4{font-size:.8rem;font-weight:600;margin-bottom:2px}
 .ep-info p{font-size:.7rem;color:var(--t3)}
 
-/* COMMENTS */
 .cmt-section{margin-top:30px}
 .cmt-form textarea{width:100%;padding:12px;background:var(--c);border:1px solid var(--bd);border-radius:var(--r);color:var(--t);resize:vertical;font-size:.84rem;min-height:60px}
 .cmt-form textarea:focus{border-color:var(--p)}
@@ -167,7 +117,6 @@ input,select,textarea{font-family:inherit;outline:none}
 .cmt-acts button{background:none;color:var(--t3);font-size:.74rem;display:flex;align-items:center;gap:3px}
 .cmt-acts button:hover{color:var(--p)}
 
-/* WATCH */
 .watch-wrap{display:flex;gap:16px;margin-top:var(--nv);padding:16px;min-height:calc(100vh - var(--nv))}
 .watch-main{flex:1}
 .player{position:relative;width:100%;padding-top:56.25%;background:#000;border-radius:var(--r);overflow:hidden}
@@ -188,12 +137,6 @@ input,select,textarea{font-family:inherit;outline:none}
 .ep-list-item:hover{background:var(--c2)}
 .ep-list-item.on{background:var(--pg);border-left:2px solid var(--p)}
 
-/* WALLPAPERS */
-.wp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;padding:20px 0 40px}
-.wp-card{border-radius:var(--r);aspect-ratio:16/10;border:1px solid var(--bd);background:var(--b3);transition:.25s;display:flex;align-items:center;justify-content:center;color:var(--t3);font-size:.82rem;cursor:pointer}
-.wp-card:hover{border-color:var(--p);transform:scale(1.02)}
-
-/* COMMUNITY */
 .comm-wrap{display:flex;gap:24px;padding:24px 0}
 .comm-main{flex:1}
 .comm-side{width:300px;flex-shrink:0}
@@ -201,7 +144,6 @@ input,select,textarea{font-family:inherit;outline:none}
 .post-box textarea{width:100%;padding:10px;background:var(--b3);border:1px solid var(--bd);border-radius:var(--r);color:var(--t);resize:vertical;font-size:.84rem}
 .post-box-foot{display:flex;justify-content:flex-end;margin-top:8px}
 .post{background:var(--c);border-radius:var(--r);padding:16px;margin-bottom:14px;border:1px solid var(--bd)}
-.post:hover{border-color:var(--bd2)}
 .post-header{display:flex;align-items:center;gap:10px;margin-bottom:10px}
 .post-ava{width:34px;height:34px;border-radius:50%;background:var(--p);display:flex;align-items:center;justify-content:center;color:#fff;font-size:.7rem;font-weight:700}
 .post-header h4{font-size:.84rem;font-weight:600}
@@ -213,16 +155,12 @@ input,select,textarea{font-family:inherit;outline:none}
 .side-card{background:var(--c);border-radius:var(--r);padding:14px;margin-bottom:14px;border:1px solid var(--bd)}
 .side-card h3{font-size:.88rem;font-weight:700;margin-bottom:10px}
 
-/* PROFILE */
 .prof-top{padding:100px 0 30px;background:var(--b2);margin-top:var(--nv)}
 .prof-head{display:flex;align-items:flex-end;gap:20px}
 .prof-ava{width:90px;height:90px;border-radius:50%;background:var(--p);display:flex;align-items:center;justify-content:center;color:#fff;font-size:2rem;font-weight:800;flex-shrink:0}
 .prof-info h1{font-size:1.5rem;font-weight:800}
 .prof-info p{color:var(--t2);font-size:.84rem;margin-bottom:6px}
-.prof-stats{display:flex;gap:20px}
-.prof-val{font-size:1rem;font-weight:800;color:var(--p);display:block}
 
-/* SETTINGS */
 .set-wrap{padding-top:calc(var(--nv) + 30px)}
 .set-wrap h1{font-size:1.4rem;font-weight:800;margin-bottom:20px}
 .f-row{margin-bottom:14px}
@@ -231,7 +169,6 @@ input,select,textarea{font-family:inherit;outline:none}
 .f-input:focus{border-color:var(--p)}
 textarea.f-input{resize:vertical;min-height:60px}
 
-/* MODAL */
 .modal{position:fixed;inset:0;background:rgba(0,0,0,.7);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;z-index:10000;padding:20px}
 .modal.open{display:flex}
 .m-box{background:var(--b2);border-radius:14px;padding:28px;width:100%;max-width:380px;border:1px solid var(--bd);position:relative}
@@ -243,16 +180,15 @@ textarea.f-input{resize:vertical;min-height:60px}
 .m-foot{text-align:center;margin-top:14px;font-size:.8rem;color:var(--t3)}
 .m-foot a{color:var(--p);font-weight:600;cursor:pointer}
 
-/* TOAST */
 .toast-wrap{position:fixed;top:76px;right:16px;z-index:99999;display:flex;flex-direction:column;gap:8px}
 .toast{padding:12px 16px;border-radius:var(--r);background:var(--c);border:1px solid var(--bd);font-size:.82rem}
 .toast.ok{border-left:3px solid #10b981}
 .toast.err{border-left:3px solid #ef4444}
 
-/* FOOTER */
 .footer{background:var(--b2);border-top:1px solid var(--bd);margin-top:40px}
 .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px;padding:36px 0}
-.foot-logo{font-size:1.1rem;font-weight:800;margin-bottom:10px}
+.foot-logo{display:flex;align-items:center;gap:10px;font-size:1.1rem;font-weight:800;margin-bottom:10px}
+.foot-logo img{width:30px;height:30px;border-radius:50%;object-fit:cover}
 .foot-logo b{color:var(--p)}
 .foot-col p{color:var(--t3);font-size:.8rem;line-height:1.7}
 .foot-col h3{font-size:.86rem;font-weight:700;margin-bottom:10px}
@@ -265,242 +201,195 @@ textarea.f-input{resize:vertical;min-height:60px}
 .socials a:hover{color:var(--p);border-color:var(--p)}
 .foot-bottom{text-align:center;padding:14px 0;border-top:1px solid var(--bd);font-size:.72rem;color:var(--t3)}
 
-.back-top{position:fixed;bottom:20px;right:20px;width:40px;height:40px;border-radius:50%;background:var(--p);color:#fff;font-size:.9rem;display:none;align-items:center;justify-content:center;z-index:999}
-.back-top.show{display:flex}
+.pg-banner{height:220px;display:flex;flex-direction:column;align-items:center;justify-content:center;margin-top:var(--nv);background:var(--b3)}
+.pg-banner h1{font-size:1.8rem;font-weight:900}
+.pg-banner p{color:var(--t2);font-size:.9rem}
 
-@media(max-width:1024px){.sched{grid-template-columns:repeat(3,1fr)}.comm-side{display:none}.foot-grid{grid-template-columns:1fr 1fr}.watch-side{width:240px}}
-@media(max-width:768px){.nav-links{display:none}.nav-search{max-width:160px}.mob-btn{display:flex}.hero{height:55vh}.slide-info h1{font-size:1.6rem}.slide-info{left:14px;right:14px;bottom:10%}.grid{grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px}.sched{grid-template-columns:repeat(2,1fr)}.detail-flex{flex-direction:column;align-items:center;text-align:center}.watch-wrap{flex-direction:column}.watch-side{width:100%;max-height:220px}.prof-head{flex-direction:column;align-items:center;text-align:center}.foot-grid{grid-template-columns:1fr}}
-@media(max-width:480px){.nav-search{display:none}.grid{grid-template-columns:repeat(2,1fr)}.sched{grid-template-columns:1fr}.wp-grid{grid-template-columns:1fr}.ep-grid{grid-template-columns:1fr}}
+@media(max-width:1024px){.comm-side{display:none}.foot-grid{grid-template-columns:1fr 1fr}.watch-side{width:240px}}
+@media(max-width:768px){.nav-links{display:none}.nav-search{max-width:160px}.mob-btn{display:flex}.hero{height:55vh}.hero-info h1{font-size:1.6rem}.hero-info{left:14px;right:14px;bottom:10%}.grid{grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px}.detail-flex{flex-direction:column;align-items:center;text-align:center}.watch-wrap{flex-direction:column}.watch-side{width:100%;max-height:220px}.prof-head{flex-direction:column;align-items:center;text-align:center}.foot-grid{grid-template-columns:1fr}}
+@media(max-width:480px){.nav-search{display:none}.grid{grid-template-columns:repeat(2,1fr)}.ep-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <div class="nav">
-<div class="nav-logo" onclick="go('home')">Anime<b>Dub</b> TR</div>
+<div class="nav-logo" onclick="go('home')"><img src="https://i.pinimg.com/736x/29/60/55/296055037af498e60024e498046c498b.jpg" alt="Logo">Gals<b>Manime</b></div>
 <div class="nav-search"><input type="text" id="searchInput" placeholder="Anime ara..." onkeyup="doSearch()"><i class="fa-solid fa-magnifying-glass"></i></div>
-<ul class="nav-links"><li><a href="#" onclick="go('home')" class="on" data-p="home">Ana Sayfa</a></li><li><a href="#" onclick="go('list')" data-p="list">Anime Listesi</a></li><li><a href="#" onclick="go('wall')" data-p="wall">Wallpaperlar</a></li><li><a href="#" onclick="go('comm')" data-p="comm">Topluluk</a></li></ul>
+<ul class="nav-links"><li><a href="#" onclick="go('home')" class="on" data-p="home">Ana Sayfa</a></li><li><a href="#" onclick="go('list')" data-p="list">Anime Listesi</a></li><li><a href="#" onclick="go('comm')" data-p="comm">Topluluk</a></li></ul>
 <div class="nav-right">
 <div class="auth-btns" id="authBtns"><button class="btn btn-g btn-s" onclick="openModal('loginModal')">Giris Yap</button><button class="btn btn-p btn-s" onclick="openModal('regModal')">Kayit Ol</button></div>
 <div class="user-btn" id="userBtn" onclick="document.getElementById('userDD').classList.toggle('open')"><span id="userName"></span></div>
 <div class="dropdown" id="userDD"><a href="#" onclick="go('profile')"><i class="fa-solid fa-user"></i> Profilim</a><a href="#" onclick="go('settings')"><i class="fa-solid fa-gear"></i> Ayarlar</a><hr><a href="#" onclick="doLogout()" style="color:var(--p)"><i class="fa-solid fa-right-from-bracket"></i> Cikis</a></div>
 <button class="mob-btn" onclick="document.getElementById('mobMenu').classList.toggle('open')"><i class="fa-solid fa-bars"></i></button>
-</div>
-</div>
-<div class="mob-menu" id="mobMenu"><a href="#" onclick="go('home')">Ana Sayfa</a><a href="#" onclick="go('list')">Anime Listesi</a><a href="#" onclick="go('wall')">Wallpaperlar</a><a href="#" onclick="go('comm')">Topluluk</a></div>
+</div></div>
+<div class="mob-menu" id="mobMenu"><a href="#" onclick="go('home')">Ana Sayfa</a><a href="#" onclick="go('list')">Anime Listesi</a><a href="#" onclick="go('comm')">Topluluk</a></div>
 
-<!-- PAGES -->
+<!-- HOME -->
 <div class="pg on" id="pg-home">
-
-<!-- HERO -->
 <section class="hero">
-<div class="slide on" id="s0"><div class="slide-dark"></div><div class="slide-info"><span class="slide-badge red">YENI BOLUM</span><h1>Attack on Titan</h1><p>Final Sezonu Turkce Dublaj ile izleyin!</p><div class="slide-meta"><span><i class="fa-solid fa-star"></i> 9.8</span><span><i class="fa-solid fa-eye"></i> 15.2K</span></div><div class="slide-btns"><button class="btn btn-p btn-l" onclick="go('watch')"><i class="fa-solid fa-play"></i> Izle</button><button class="btn btn-g btn-l" onclick="go('detail')">Detay</button></div></div></div>
-<div class="slide" id="s1"><div class="slide-dark"></div><div class="slide-info"><span class="slide-badge hot">POPULER</span><h1>Demon Slayer</h1><p>Tanjiro'nun yolculugu Turkce dublaj ile!</p><div class="slide-meta"><span><i class="fa-solid fa-star"></i> 9.5</span><span><i class="fa-solid fa-eye"></i> 22K</span></div><div class="slide-btns"><button class="btn btn-p btn-l" onclick="go('watch')"><i class="fa-solid fa-play"></i> Izle</button><button class="btn btn-g btn-l" onclick="go('detail')">Detay</button></div></div></div>
-<div class="slide" id="s2"><div class="slide-dark"></div><div class="slide-info"><span class="slide-badge purple">YENI SERI</span><h1>Jujutsu Kaisen</h1><p>Lanetli enerjilerle dolu bir dunyada mucadele!</p><div class="slide-meta"><span><i class="fa-solid fa-star"></i> 9.3</span><span><i class="fa-solid fa-eye"></i> 18K</span></div><div class="slide-btns"><button class="btn btn-p btn-l" onclick="go('watch')"><i class="fa-solid fa-play"></i> Izle</button><button class="btn btn-g btn-l" onclick="go('detail')">Detay</button></div></div></div>
-<button class="s-arr left" onclick="chSlide(-1)"><i class="fa-solid fa-chevron-left"></i></button>
-<button class="s-arr right" onclick="chSlide(1)"><i class="fa-solid fa-chevron-right"></i></button>
-<div class="s-dots"><div class="s-dot on" onclick="goSlide(0)"></div><div class="s-dot" onclick="goSlide(1)"></div><div class="s-dot" onclick="goSlide(2)"></div></div>
+<div class="hero-bg" style="background-image:url('https://i.pinimg.com/originals/54/a4/f5/54a4f5ec1d307588f5e6fca69894e944.jpg')"></div>
+<div class="hero-dark"></div>
+<div class="hero-info">
+<span class="hero-badge">YENI BOLUM</span>
+<h1>Jujutsu Kaisen</h1>
+<p>Lanetli enerjilerle dolu bir dunyada Yuji Itadori'nin mucadelesi! Turkce Dublaj ile izle.</p>
+<div class="hero-meta"><span><i class="fa-solid fa-star"></i> 9.3</span><span><i class="fa-solid fa-clock"></i> 24dk</span></div>
+<div class="hero-btns">
+<button class="btn btn-p btn-l" onclick="go('watch')"><i class="fa-solid fa-play"></i> Izle</button>
+<button class="btn btn-g btn-l" onclick="go('detail')">Detay</button>
+</div>
+</div>
 </section>
 
-<!-- STATS -->
-<section class="stats"><div class="box stats-row">
-<div class="stat"><i class="fa-solid fa-film"></i><div><span class="stat-num">156</span><span class="stat-lbl">Anime</span></div></div>
-<div class="stat"><i class="fa-solid fa-play"></i><div><span class="stat-num">2847</span><span class="stat-lbl">Bolum</span></div></div>
-<div class="stat"><i class="fa-solid fa-microphone"></i><div><span class="stat-num">45</span><span class="stat-lbl">Dublajci</span></div></div>
-<div class="stat"><i class="fa-solid fa-users"></i><div><span class="stat-num">32K</span><span class="stat-lbl">Uye</span></div></div>
+<section class="sec"><div class="box">
+<div class="sec-head"><h2>Son Eklenenler</h2></div>
+<div class="grid" id="gridLatest"></div>
 </div></section>
 
-<!-- LATEST -->
-<section class="sec"><div class="box"><div class="sec-head"><h2>Son Eklenenler</h2><a class="more" onclick="go('list')">Tumunu Gor</a></div><div class="grid" id="gridLatest"></div></div></section>
-
-<!-- POPULAR -->
-<section class="sec sec-dark"><div class="box"><div class="sec-head"><h2>Populer Animeler</h2><div class="tabs"><button class="tab on" onclick="ftab(this)">Tumu</button><button class="tab" onclick="ftab(this)">Aksiyon</button><button class="tab" onclick="ftab(this)">Romantik</button><button class="tab" onclick="ftab(this)">Fantezi</button></div></div><div class="grid" id="gridPop"></div></div></section>
-
-<!-- ONGOING -->
-<section class="sec"><div class="box"><div class="sec-head"><h2>Devam Edenler</h2></div><div class="scroll-row" id="scrollOn"></div></div></section>
-
-<!-- SCHEDULE -->
-<section class="sec sec-dark"><div class="box"><div class="sec-head"><h2>Haftalik Program</h2></div><div class="sched" id="sched"></div></div></section>
+<section class="sec sec-dark"><div class="box">
+<div class="sec-head"><h2>Tum Bolumler</h2></div>
+<div class="grid" id="gridAll"></div>
+</div></section>
 </div>
 
-<!-- LIST PAGE -->
+<!-- LIST -->
 <div class="pg" id="pg-list">
-<div class="pg-banner"><h1>Anime Listesi</h1><p>Tum Turkce dublajli animeler</p></div>
-<div class="box"><div class="filters"><div class="f-group"><label>Tur:</label><select><option>Tumu</option><option>Aksiyon</option><option>Romantik</option><option>Komedi</option></select></div><div class="f-group"><label>Sirala:</label><select><option>Populer</option><option>Yeni</option><option>Puan</option></select></div></div><div class="grid" id="gridAll"></div></div>
+<div class="pg-banner"><h1>Anime Listesi</h1><p>Jujutsu Kaisen - Tum Bolumler</p></div>
+<div class="box" style="padding-top:20px"><div class="grid" id="gridList"></div></div>
 </div>
 
-<!-- DETAIL PAGE -->
+<!-- DETAIL -->
 <div class="pg" id="pg-detail">
-<div class="detail-top"><div class="box detail-flex"><div class="detail-poster"></div><div class="detail-text"><h1>Attack on Titan</h1><div class="detail-tags"><span>Aksiyon</span><span>2013</span><span>25 Bolum</span></div><p class="detail-desc">Insanligin devasa titanlarla mucadelesi. Eren Yeager'in ozgurluk savasi.</p><div class="detail-btns"><button class="btn btn-p btn-l" onclick="go('watch')"><i class="fa-solid fa-play"></i> Izle</button><button class="btn btn-g btn-l" onclick="toggleFav(this)"><i class="fa-regular fa-heart"></i> Favorile</button></div></div></div></div>
+<div class="detail-top"><div class="box detail-flex">
+<div class="detail-poster"><img src="https://i.pinimg.com/originals/54/a4/f5/54a4f5ec1d307588f5e6fca69894e944.jpg" alt="JJK"></div>
+<div class="detail-text">
+<h1>Jujutsu Kaisen</h1>
+<div class="detail-tags"><span>Aksiyon</span><span>2020</span><span>24 Bolum</span><span>Devam Ediyor</span></div>
+<p class="detail-desc">Yuji Itadori siradan bir lise ogrencisiyken lanetli bir nesneyi yutarak Ryomen Sukuna'nin ev sahibi olur. Jujutsu buyuculeri dunyasina adim atar.</p>
+<div class="detail-btns">
+<button class="btn btn-p btn-l" onclick="go('watch')"><i class="fa-solid fa-play"></i> Izle</button>
+<button class="btn btn-g btn-l" onclick="toggleFav(this)"><i class="fa-regular fa-heart"></i> Favorile</button>
+</div>
+</div></div></div>
 <div class="box" style="padding-top:30px">
 <h2 style="font-size:1.1rem;margin-bottom:16px">Bolumler</h2>
 <div class="ep-grid" id="epGrid"></div>
 <div class="cmt-section"><h2 style="font-size:1.1rem;margin-bottom:16px">Yorumlar</h2>
 <div class="cmt-form" id="cmtForm" style="display:none"><textarea id="cmtInput" placeholder="Yorumunuzu yazin..."></textarea><div class="cmt-send"><button class="btn btn-p btn-s" onclick="postCmt()">Gonder</button></div></div>
-<div id="cmtList"></div></div></div>
-</div>
+<div id="cmtList"></div></div>
+</div></div>
 
-<!-- WATCH PAGE -->
+<!-- WATCH -->
 <div class="pg" id="pg-watch">
 <div class="watch-wrap"><div class="watch-main">
 <div class="player"><video id="vid" controls></video><div class="player-ov" id="vidOv" onclick="this.classList.add('hide')"><div class="play-big"><i class="fa-solid fa-play"></i></div></div></div>
-<div class="watch-info"><div class="watch-head"><h2>Attack on Titan - Bolum 1</h2><div class="w-acts"><button onclick="toast('Begenildi','ok')"><i class="fa-regular fa-thumbs-up"></i> 0</button><button><i class="fa-solid fa-download"></i></button></div></div>
-<div class="w-nav"><button class="btn btn-g btn-s">Onceki</button><button class="btn btn-p btn-s">Sonraki</button></div></div>
+<div class="watch-info"><div class="watch-head"><h2 id="watchTitle">Jujutsu Kaisen - Bolum 1</h2><div class="w-acts"><button onclick="toast('Begenildi','ok')"><i class="fa-regular fa-thumbs-up"></i></button><button><i class="fa-solid fa-download"></i></button></div></div>
+<div class="w-nav"><button class="btn btn-g btn-s" onclick="chEp(-1)">Onceki</button><button class="btn btn-p btn-s" onclick="chEp(1)">Sonraki</button></div></div>
 </div><div class="watch-side"><h3>Bolumler</h3><div id="wEpList"></div></div></div>
 </div>
 
-<!-- WALLPAPERS PAGE -->
-<div class="pg" id="pg-wall">
-<div class="pg-banner"><h1>Wallpaperlar</h1><p>En guzel anime duvarkagitlari</p></div>
-<div class="box"><div class="tabs" style="margin:20px 0"><button class="tab on" onclick="ftab(this)">Tumu</button><button class="tab" onclick="ftab(this)">Masaustu</button><button class="tab" onclick="ftab(this)">Mobil</button></div><div class="wp-grid" id="wpGrid"></div></div>
-</div>
-
-<!-- COMMUNITY PAGE -->
+<!-- COMMUNITY -->
 <div class="pg" id="pg-comm">
 <div class="pg-banner"><h1>Topluluk</h1><p>Anime severlerle tanisip tartis!</p></div>
 <div class="box"><div class="comm-wrap"><div class="comm-main">
 <div class="post-box" id="postBox" style="display:none"><textarea id="postInput" placeholder="Bir seyler paylas..."></textarea><div class="post-box-foot"><button class="btn btn-p btn-s" onclick="createPost()">Paylas</button></div></div>
 <div id="postList"></div></div>
 <div class="comm-side"><div class="side-card"><h3>Trend Konular</h3><div id="trends"></div></div></div>
-</div></div>
-</div>
+</div></div></div>
 
-<!-- PROFILE PAGE -->
+<!-- PROFILE -->
 <div class="pg" id="pg-profile">
-<div class="prof-top"><div class="box prof-head"><div class="prof-ava" id="profAva">?</div><div class="prof-info"><h1 id="profName">Kullanici</h1><p>Anime sever</p><div class="prof-stats"><div><span class="prof-val">12</span><span style="font-size:.68rem;color:var(--t3)">Izlenen</span></div><div><span class="prof-val">5</span><span style="font-size:.68rem;color:var(--t3)">Favori</span></div></div></div></div></div>
-<div class="box"><div class="grid" id="profGrid"></div></div>
+<div class="prof-top"><div class="box prof-head"><div class="prof-ava" id="profAva">?</div><div class="prof-info"><h1 id="profName">Kullanici</h1><p>Anime sever</p></div></div></div>
 </div>
 
-<!-- SETTINGS PAGE -->
+<!-- SETTINGS -->
 <div class="pg" id="pg-settings">
 <div class="box set-wrap"><h1>Ayarlar</h1>
 <div class="f-row"><label>Kullanici Adi</label><input type="text" class="f-input" id="setName"></div>
 <div class="f-row"><label>E-posta</label><input type="email" class="f-input" id="setEmail"></div>
-<div class="f-row"><label>Biyografi</label><textarea class="f-input" id="setBio"></textarea></div>
 <button class="btn btn-p" onclick="saveSets()">Kaydet</button>
-</div>
-</div>
+</div></div>
 
 <!-- MODALS -->
-<div class="modal" id="loginModal"><div class="m-box"><button class="m-close" onclick="closeModal('loginModal')"><i class="fa-solid fa-xmark"></i></button><div class="m-head"><h2>Giris Yap</h2><p>Hesabinla giris yap</p></div><form onsubmit="doLogin(event)"><div class="f-row"><label>E-posta</label><input type="email" class="f-input" id="logEmail" required></div><div class="f-row"><label>Sifre</label><input type="password" class="f-input" id="logPass" required></div><button type="submit" class="btn btn-p btn-f">Giris Yap</button></form><div class="m-foot">Hesabin yok mu? <a onclick="closeModal('loginModal');openModal('regModal')">Kayit Ol</a></div></div></div>
+<div class="modal" id="loginModal"><div class="m-box"><button class="m-close" onclick="closeModal('loginModal')"><i class="fa-solid fa-xmark"></i></button><div class="m-head"><h2>Giris Yap</h2></div><form onsubmit="doLogin(event)"><div class="f-row"><label>E-posta</label><input type="email" class="f-input" id="logEmail" required></div><div class="f-row"><label>Sifre</label><input type="password" class="f-input" id="logPass" required></div><button type="submit" class="btn btn-p btn-f">Giris Yap</button></form><div class="m-foot">Hesabin yok mu? <a onclick="closeModal('loginModal');openModal('regModal')">Kayit Ol</a></div></div></div>
 
-<div class="modal" id="regModal"><div class="m-box"><button class="m-close" onclick="closeModal('regModal')"><i class="fa-solid fa-xmark"></i></button><div class="m-head"><h2>Kayit Ol</h2><p>Toplulugumuza katil</p></div><form onsubmit="doReg(event)"><div class="f-row"><label>Kullanici Adi</label><input type="text" class="f-input" id="regName" required></div><div class="f-row"><label>E-posta</label><input type="email" class="f-input" id="regEmail" required></div><div class="f-row"><label>Sifre</label><input type="password" class="f-input" id="regPass" required></div><div class="f-row"><label>Sifre Tekrar</label><input type="password" class="f-input" id="regPass2" required></div><button type="submit" class="btn btn-p btn-f">Kayit Ol</button></form><div class="m-foot">Hesabin var mi? <a onclick="closeModal('regModal');openModal('loginModal')">Giris Yap</a></div></div></div>
+<div class="modal" id="regModal"><div class="m-box"><button class="m-close" onclick="closeModal('regModal')"><i class="fa-solid fa-xmark"></i></button><div class="m-head"><h2>Kayit Ol</h2></div><form onsubmit="doReg(event)"><div class="f-row"><label>Kullanici Adi</label><input type="text" class="f-input" id="regName" required></div><div class="f-row"><label>E-posta</label><input type="email" class="f-input" id="regEmail" required></div><div class="f-row"><label>Sifre</label><input type="password" class="f-input" id="regPass" required></div><div class="f-row"><label>Sifre Tekrar</label><input type="password" class="f-input" id="regPass2" required></div><button type="submit" class="btn btn-p btn-f">Kayit Ol</button></form><div class="m-foot">Hesabin var mi? <a onclick="closeModal('regModal');openModal('loginModal')">Giris Yap</a></div></div></div>
 
 <div class="toast-wrap" id="toastWrap"></div>
-<button class="back-top" id="btt" onclick="window.scrollTo(0,0)"><i class="fa-solid fa-chevron-up"></i></button>
 
-<!-- FOOTER -->
 <footer class="footer"><div class="box"><div class="foot-grid">
-<div class="foot-col"><div class="foot-logo">Anime<b>Dub</b> TR</div><p>Turkiye'nin Turkce anime dublaj platformu.</p><div class="socials"><a href="#"><i class="fa-brands fa-discord"></i></a><a href="#"><i class="fa-brands fa-twitter"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-youtube"></i></a></div></div>
-<div class="foot-col"><h3>Linkler</h3><ul><li><a href="#" onclick="go('home')">Ana Sayfa</a></li><li><a href="#" onclick="go('list')">Anime Listesi</a></li><li><a href="#" onclick="go('wall')">Wallpaperlar</a></li></ul></div>
-<div class="foot-col"><h3>Turler</h3><ul><li><a href="#">Aksiyon</a></li><li><a href="#">Romantik</a></li><li><a href="#">Komedi</a></li></ul></div>
+<div class="foot-col"><div class="foot-logo"><img src="https://i.pinimg.com/736x/29/60/55/296055037af498e60024e498046c498b.jpg" alt="">Gals<b>Manime</b></div><p>Turkce anime dublaj platformu.</p><div class="socials"><a href="#"><i class="fa-brands fa-discord"></i></a><a href="#"><i class="fa-brands fa-instagram"></i></a><a href="#"><i class="fa-brands fa-youtube"></i></a></div></div>
+<div class="foot-col"><h3>Linkler</h3><ul><li><a href="#" onclick="go('home')">Ana Sayfa</a></li><li><a href="#" onclick="go('list')">Anime Listesi</a></li><li><a href="#" onclick="go('comm')">Topluluk</a></li></ul></div>
+<div class="foot-col"><h3>Turler</h3><ul><li><a href="#">Aksiyon</a></li><li><a href="#">Fantezi</a></li><li><a href="#">Gerilim</a></li></ul></div>
 <div class="foot-col"><h3>Destek</h3><ul><li><a href="#">SSS</a></li><li><a href="#">Iletisim</a></li><li><a href="#">Gizlilik</a></li></ul></div>
-</div><div class="foot-bottom">2024 AnimeDub TR. Tum haklari saklidir.</div></div></footer>
+</div><div class="foot-bottom">2024 GalsManime. Tum haklari saklidir.</div></div></footer>
 
 <script>
-var animeList=[
-{id:0,t:"Attack on Titan",g:"Aksiyon",y:2013,ep:25,r:9.8,v:"15.2K",st:"Tamamlandi"},
-{id:1,t:"Demon Slayer",g:"Aksiyon",y:2019,ep:26,r:9.5,v:"22K",st:"Devam"},
-{id:2,t:"Jujutsu Kaisen",g:"Aksiyon",y:2020,ep:24,r:9.3,v:"18K",st:"Devam"},
-{id:3,t:"One Piece",g:"Macera",y:1999,ep:1000,r:9.7,v:"30K",st:"Devam"},
-{id:4,t:"Naruto",g:"Aksiyon",y:2007,ep:500,r:9.4,v:"25K",st:"Tamamlandi"},
-{id:5,t:"My Hero Academia",g:"Aksiyon",y:2016,ep:138,r:8.9,v:"12K",st:"Devam"},
-{id:6,t:"Spy x Family",g:"Komedi",y:2022,ep:25,r:9.0,v:"14K",st:"Devam"},
-{id:7,t:"Death Note",g:"Gerilim",y:2006,ep:37,r:9.6,v:"20K",st:"Tamamlandi"},
-{id:8,t:"Fullmetal Alchemist",g:"Fantezi",y:2009,ep:64,r:9.7,v:"18K",st:"Tamamlandi"},
-{id:9,t:"Tokyo Revengers",g:"Aksiyon",y:2021,ep:24,r:8.5,v:"10K",st:"Devam"},
-{id:10,t:"Chainsaw Man",g:"Aksiyon",y:2022,ep:12,r:9.1,v:"16K",st:"Devam"},
-{id:11,t:"Your Name",g:"Romantik",y:2016,ep:1,r:9.8,v:"28K",st:"Film"}
-];
-var days=["Pzt","Sal","Car","Per","Cum","Cmt","Paz"];
+var jjkImg="https://i.pinimg.com/originals/54/a4/f5/54a4f5ec1d307588f5e6fca69894e944.jpg";
+var jjkThumb="https://i.pinimg.com/736x/e0/3e/01/e03e016e1ed36a1e04e4dbb4fca1cac5.jpg";
+var curEp=1;
 var cmts=[];
 var posts=[
-{u:"AnimeKral",t:"Attack on Titan final muhtesemdii!",d:"2 saat once",l:24},
-{u:"OtakuTR",t:"Demon Slayer yeni sezon bekliyoruz!",d:"5 saat once",l:18},
-{u:"MangaFan",t:"Jujutsu Kaisen dublaji cok iyi olmus",d:"1 gun once",l:32}
+{u:"JJKFan",t:"Jujutsu Kaisen dublaji muhtesem olmus! Gojo'nun sesi cok uygun.",d:"2 saat once",l:24},
+{u:"AnimeKral",t:"Sukuna vs Gojo savasi icin sabrsizlaniyorum!",d:"5 saat once",l:18},
+{u:"OtakuTR",t:"Yuji'nin karakter gelisimi cok iyi islenmi. Bravo ekibe!",d:"1 gun once",l:32}
 ];
-var user=JSON.parse(localStorage.getItem("adUser"))||null;
+var user=JSON.parse(localStorage.getItem("gmUser"))||null;
 
-function makeCard(a){
-return '<div class="card" onclick="go(\'detail\')"><div class="card-img"><div class="card-hover"><div class="card-play"><i class="fa-solid fa-play"></i></div></div><span class="card-badge">'+a.ep+' Bl</span><span class="card-rate"><i class="fa-solid fa-star"></i> '+a.r+'</span></div><div class="card-info"><h3>'+a.t+'</h3><div class="genre">'+a.g+' - '+a.y+'</div><div class="meta"><span>'+a.v+'</span><span>'+a.st+'</span></div></div></div>';
+function makeCard(ep){
+return '<div class="card" onclick="go(\'detail\')"><div class="card-img"><img src="'+jjkImg+'" alt="JJK"><div class="card-hover"><div class="card-play"><i class="fa-solid fa-play"></i></div></div><span class="card-badge">Bolum '+ep+'</span><span class="card-rate"><i class="fa-solid fa-star"></i> 9.3</span></div><div class="card-info"><h3>Jujutsu Kaisen</h3><div class="genre">Aksiyon - Bolum '+ep+'</div><div class="meta"><span>Turkce Dublaj</span><span>24dk</span></div></div></div>';
 }
 
-function renderAll(){
-var g1=document.getElementById("gridLatest");
-var g2=document.getElementById("gridPop");
-var g3=document.getElementById("scrollOn");
-var g4=document.getElementById("gridAll");
-var g5=document.getElementById("profGrid");
-var h1="",h2="",h3="",h4="";
-for(var i=0;i<6&&i<animeList.length;i++)h1+=makeCard(animeList[i]);
-for(var i=0;i<8&&i<animeList.length;i++)h2+=makeCard(animeList[i]);
-for(var i=0;i<animeList.length;i++){if(animeList[i].st==="Devam")h3+=makeCard(animeList[i]);}
-for(var i=0;i<animeList.length;i++)h4+=makeCard(animeList[i]);
-if(g1)g1.innerHTML=h1;if(g2)g2.innerHTML=h2;if(g3)g3.innerHTML=h3;if(g4)g4.innerHTML=h4;if(g5)g5.innerHTML=h1;
+function renderGrids(){
+var h="";for(var i=1;i<=6;i++)h+=makeCard(i);
+document.getElementById("gridLatest").innerHTML=h;
+var h2="";for(var i=1;i<=24;i++)h2+=makeCard(i);
+document.getElementById("gridAll").innerHTML=h2;
+document.getElementById("gridList").innerHTML=h2;
 }
 
 function renderEps(){
-var eg=document.getElementById("epGrid");
-var wl=document.getElementById("wEpList");
 var h="",w="";
-for(var i=1;i<=12;i++){
-h+='<div class="ep-card'+(i===1?" on":"")+'" onclick="go(\'watch\')"><div class="ep-thumb"></div><div class="ep-info"><h4>Bolum '+i+'</h4><p>24 dakika</p></div></div>';
-w+='<div class="ep-list-item'+(i===1?" on":"")+'">Bolum '+i+' - 24dk</div>';
+for(var i=1;i<=24;i++){
+h+='<div class="ep-card'+(i===1?" on":"")+'" onclick="goEp('+i+')"><div class="ep-thumb"><img src="'+jjkThumb+'" alt=""></div><div class="ep-info"><h4>Bolum '+i+'</h4><p>Turkce Dublaj - 24dk</p></div></div>';
+w+='<div class="ep-list-item'+(i===1?" on":"")+'" onclick="goEp('+i+')">Bolum '+i+' - 24dk</div>';
 }
-if(eg)eg.innerHTML=h;if(wl)wl.innerHTML=w;
-}
-
-function renderSched(){
-var s=document.getElementById("sched");if(!s)return;
-var td=new Date().getDay();var ti=td===0?6:td-1;
-var h="";
-for(var i=0;i<7;i++){
-var isT=i===ti;
-var anm=[];for(var j=0;j<animeList.length;j++){if(j%7===i)anm.push(animeList[j]);}
-anm=anm.slice(0,2);
-h+='<div class="sched-day'+(isT?" today":"")+'"><div class="sched-head">'+days[i]+'</div>';
-for(var k=0;k<anm.length;k++)h+='<div class="sched-item">'+anm[k].t+'</div>';
-h+='</div>';
-}
-s.innerHTML=h;
+document.getElementById("epGrid").innerHTML=h;
+document.getElementById("wEpList").innerHTML=w;
 }
 
-function renderWP(){
-var g=document.getElementById("wpGrid");if(!g)return;
-var h="";
-for(var i=0;i<8;i++)h+='<div class="wp-card">Wallpaper '+(i+1)+'</div>';
-g.innerHTML=h;
+function goEp(n){
+curEp=n;
+document.getElementById("watchTitle").textContent="Jujutsu Kaisen - Bolum "+n;
+document.getElementById("vidOv").classList.remove("hide");
+var items=document.querySelectorAll(".ep-list-item");
+for(var i=0;i<items.length;i++){items[i].classList.remove("on");if(i===n-1)items[i].classList.add("on");}
+go("watch");
 }
+function chEp(d){var n=curEp+d;if(n>=1&&n<=24)goEp(n);else toast("Bolum yok","err");}
 
 function renderPosts(){
-var l=document.getElementById("postList");if(!l)return;
+var l=document.getElementById("postList");
 var h="";
 for(var i=0;i<posts.length;i++){
 var p=posts[i];
-h+='<div class="post"><div class="post-header"><div class="post-ava">'+p.u[0]+'</div><div><h4>'+p.u+'</h4><span>'+p.d+'</span></div></div><div class="post-text">'+p.t+'</div><div class="post-foot"><button onclick="this.innerHTML=\'<i class=fa-solid fa-heart></i> \'+(parseInt(this.textContent)+1)"><i class="fa-regular fa-heart"></i> '+p.l+'</button><button><i class="fa-regular fa-comment"></i> Yorum</button></div></div>';
+h+='<div class="post"><div class="post-header"><div class="post-ava">'+p.u[0]+'</div><div><h4>'+p.u+'</h4><span>'+p.d+'</span></div></div><div class="post-text">'+p.t+'</div><div class="post-foot"><button onclick="this.innerHTML=\'<i class=fa-solid&nbsp;fa-heart></i> \'+(parseInt(this.textContent||0)+1)"><i class="fa-regular fa-heart"></i> '+p.l+'</button><button><i class="fa-regular fa-comment"></i> Yorum</button></div></div>';
 }
 l.innerHTML=h;
 }
 
 function renderTrends(){
-var t=document.getElementById("trends");if(!t)return;
-var topics=["#AttackOnTitan","#DemonSlayer","#JujutsuKaisen","#TurkceDublaj","#AnimeTR"];
-var h="";for(var i=0;i<topics.length;i++)h+='<div style="padding:6px 0;font-size:.82rem;color:var(--p);cursor:pointer">'+topics[i]+'</div>';
-t.innerHTML=h;
+document.getElementById("trends").innerHTML=["#JujutsuKaisen","#Gojo","#Sukuna","#TurkceDublaj","#GalsManime"].map(function(t){return'<div style="padding:6px 0;font-size:.82rem;color:var(--p);cursor:pointer">'+t+'</div>';}).join("");
 }
 
 function renderCmts(){
-var l=document.getElementById("cmtList");if(!l)return;
-if(cmts.length===0){l.innerHTML='<p style="color:var(--t3);font-size:.84rem">Henuz yorum yok.</p>';return;}
+var l=document.getElementById("cmtList");
+if(cmts.length===0){l.innerHTML='<p style="color:var(--t3);font-size:.84rem">Henuz yorum yok. Ilk yorumu sen yap!</p>';return;}
 var h="";
-for(var i=0;i<cmts.length;i++){
-var c=cmts[i];
-h+='<div class="cmt"><div class="cmt-ava">'+c.u[0]+'</div><div class="cmt-body"><div class="cmt-top"><span class="name">'+c.u+'</span><span class="date">'+c.d+'</span></div><div class="cmt-text">'+c.t+'</div><div class="cmt-acts"><button><i class="fa-regular fa-thumbs-up"></i> 0</button></div></div></div>';
-}
+for(var i=0;i<cmts.length;i++){var c=cmts[i];h+='<div class="cmt"><div class="cmt-ava">'+c.u[0]+'</div><div class="cmt-body"><div class="cmt-top"><span class="name">'+c.u+'</span><span class="date">'+c.d+'</span></div><div class="cmt-text">'+c.t+'</div></div></div>';}
 l.innerHTML=h;
 }
 
-// NAV
 function go(p){
 var all=document.querySelectorAll(".pg");for(var i=0;i<all.length;i++)all[i].classList.remove("on");
 var el=document.getElementById("pg-"+p);if(el)el.classList.add("on");
@@ -510,138 +399,38 @@ document.getElementById("userDD").classList.remove("open");
 window.scrollTo(0,0);
 }
 
-// SLIDER
-var cs=0;
-function goSlide(n){
-for(var i=0;i<3;i++){document.getElementById("s"+i).classList.remove("on");document.querySelectorAll(".s-dot")[i].classList.remove("on");}
-cs=n;document.getElementById("s"+n).classList.add("on");document.querySelectorAll(".s-dot")[n].classList.add("on");
-}
-function chSlide(d){var n=cs+d;if(n<0)n=2;if(n>2)n=0;goSlide(n);}
-setInterval(function(){chSlide(1);},5000);
-
-// SEARCH
 function doSearch(){
 var v=document.getElementById("searchInput").value.toLowerCase();
-if(v.length<2)return;
-var found=[];for(var i=0;i<animeList.length;i++){if(animeList[i].t.toLowerCase().indexOf(v)>=0)found.push(animeList[i]);}
-if(found.length>0)toast(found[0].t+" bulundu","ok");
+if(v.length>=2&&"jujutsu kaisen".indexOf(v)>=0)toast("Jujutsu Kaisen bulundu!","ok");
 }
 
-// TABS
-function ftab(el){var sibs=el.parentElement.querySelectorAll(".tab");for(var i=0;i<sibs.length;i++)sibs[i].classList.remove("on");el.classList.add("on");}
-
-// AUTH
 function updateUI(){
-var ab=document.getElementById("authBtns");
-var ub=document.getElementById("userBtn");
-var un=document.getElementById("userName");
-var cf=document.getElementById("cmtForm");
-var pb=document.getElementById("postBox");
-var pa=document.getElementById("profAva");
-var pn=document.getElementById("profName");
-if(user){
-ab.style.display="none";ub.style.display="flex";un.textContent=user.name;
-if(cf)cf.style.display="block";if(pb)pb.style.display="block";
-if(pa)pa.textContent=user.name[0].toUpperCase();if(pn)pn.textContent=user.name;
-}else{
-ab.style.display="flex";ub.style.display="none";
-if(cf)cf.style.display="none";if(pb)pb.style.display="none";
-}
+var ab=document.getElementById("authBtns");var ub=document.getElementById("userBtn");var un=document.getElementById("userName");
+var cf=document.getElementById("cmtForm");var pb=document.getElementById("postBox");var pa=document.getElementById("profAva");var pn=document.getElementById("profName");
+if(user){ab.style.display="none";ub.style.display="flex";un.textContent=user.name;if(cf)cf.style.display="block";if(pb)pb.style.display="block";if(pa)pa.textContent=user.name[0].toUpperCase();if(pn)pn.textContent=user.name;}
+else{ab.style.display="flex";ub.style.display="none";if(cf)cf.style.display="none";if(pb)pb.style.display="none";}
 }
 
-function doLogin(e){
-e.preventDefault();
-var email=document.getElementById("logEmail").value;
-var pass=document.getElementById("logPass").value;
-var users=JSON.parse(localStorage.getItem("adUsers")||"[]");
-var found=null;for(var i=0;i<users.length;i++){if(users[i].email===email&&users[i].pass===pass)found=users[i];}
-if(found){user=found;localStorage.setItem("adUser",JSON.stringify(user));closeModal("loginModal");updateUI();toast("Giris basarili!","ok");}
-else{toast("Email veya sifre yanlis","err");}
-}
+function doLogin(e){e.preventDefault();var email=document.getElementById("logEmail").value;var pass=document.getElementById("logPass").value;var users=JSON.parse(localStorage.getItem("gmUsers")||"[]");var found=null;for(var i=0;i<users.length;i++){if(users[i].email===email&&users[i].pass===pass)found=users[i];}if(found){user=found;localStorage.setItem("gmUser",JSON.stringify(user));closeModal("loginModal");updateUI();toast("Giris basarili!","ok");}else{toast("Email veya sifre yanlis","err");}}
 
-function doReg(e){
-e.preventDefault();
-var name=document.getElementById("regName").value;
-var email=document.getElementById("regEmail").value;
-var pass=document.getElementById("regPass").value;
-var pass2=document.getElementById("regPass2").value;
-if(pass!==pass2){toast("Sifreler eslesmiyor","err");return;}
-if(pass.length<4){toast("Sifre en az 4 karakter","err");return;}
-var users=JSON.parse(localStorage.getItem("adUsers")||"[]");
-for(var i=0;i<users.length;i++){if(users[i].email===email){toast("Bu email kayitli","err");return;}}
-var u={name:name,email:email,pass:pass};
-users.push(u);localStorage.setItem("adUsers",JSON.stringify(users));
-user=u;localStorage.setItem("adUser",JSON.stringify(u));
-closeModal("regModal");updateUI();toast("Kayit basarili!","ok");
-}
+function doReg(e){e.preventDefault();var name=document.getElementById("regName").value;var email=document.getElementById("regEmail").value;var pass=document.getElementById("regPass").value;var pass2=document.getElementById("regPass2").value;if(pass!==pass2){toast("Sifreler eslesmiyor","err");return;}if(pass.length<4){toast("Sifre en az 4 karakter","err");return;}var users=JSON.parse(localStorage.getItem("gmUsers")||"[]");for(var i=0;i<users.length;i++){if(users[i].email===email){toast("Bu email kayitli","err");return;}}var u={name:name,email:email,pass:pass};users.push(u);localStorage.setItem("gmUsers",JSON.stringify(users));user=u;localStorage.setItem("gmUser",JSON.stringify(u));closeModal("regModal");updateUI();toast("Kayit basarili!","ok");}
 
-function doLogout(){
-user=null;localStorage.removeItem("adUser");
-document.getElementById("userDD").classList.remove("open");
-updateUI();toast("Cikis yapildi","ok");
-}
+function doLogout(){user=null;localStorage.removeItem("gmUser");document.getElementById("userDD").classList.remove("open");updateUI();toast("Cikis yapildi","ok");}
+function saveSets(){if(!user){toast("Giris yapin","err");return;}var n=document.getElementById("setName").value;var e=document.getElementById("setEmail").value;if(n)user.name=n;if(e)user.email=e;localStorage.setItem("gmUser",JSON.stringify(user));updateUI();toast("Kaydedildi","ok");}
 
-function saveSets(){
-if(!user){toast("Giris yapin","err");return;}
-var n=document.getElementById("setName").value;var e=document.getElementById("setEmail").value;
-if(n)user.name=n;if(e)user.email=e;
-localStorage.setItem("adUser",JSON.stringify(user));updateUI();toast("Kaydedildi","ok");
-}
+function postCmt(){if(!user){toast("Giris yapin","err");openModal("loginModal");return;}var t=document.getElementById("cmtInput").value.trim();if(!t){toast("Yorum yazin","err");return;}cmts.unshift({u:user.name,t:t,d:"Simdi"});document.getElementById("cmtInput").value="";renderCmts();toast("Yorum eklendi","ok");}
 
-// COMMENTS
-function postCmt(){
-if(!user){toast("Giris yapin","err");openModal("loginModal");return;}
-var t=document.getElementById("cmtInput").value.trim();
-if(!t){toast("Yorum yazin","err");return;}
-cmts.unshift({u:user.name,t:t,d:"Simdi"});
-document.getElementById("cmtInput").value="";
-renderCmts();toast("Yorum eklendi","ok");
-}
+function createPost(){if(!user){toast("Giris yapin","err");return;}var t=document.getElementById("postInput").value.trim();if(!t){toast("Bir seyler yazin","err");return;}posts.unshift({u:user.name,t:t,d:"Simdi",l:0});document.getElementById("postInput").value="";renderPosts();toast("Paylasim yapildi","ok");}
 
-// POSTS
-function createPost(){
-if(!user){toast("Giris yapin","err");return;}
-var t=document.getElementById("postInput").value.trim();
-if(!t){toast("Bir seyler yazin","err");return;}
-posts.unshift({u:user.name,t:t,d:"Simdi",l:0});
-document.getElementById("postInput").value="";
-renderPosts();toast("Paylasim yapildi","ok");
-}
+function toggleFav(btn){if(!user){toast("Giris yapin","err");openModal("loginModal");return;}btn.innerHTML='<i class="fa-solid fa-heart" style="color:var(--p)"></i> Favorilerde';toast("Favorilere eklendi","ok");}
 
-// FAV
-function toggleFav(btn){
-if(!user){toast("Giris yapin","err");openModal("loginModal");return;}
-btn.innerHTML='<i class="fa-solid fa-heart" style="color:var(--p)"></i> Favorilerde';
-toast("Favorilere eklendi","ok");
-}
-
-// MODAL
 function openModal(id){document.getElementById(id).classList.add("open");}
 function closeModal(id){document.getElementById(id).classList.remove("open");}
+function toast(msg,type){var w=document.getElementById("toastWrap");var t=document.createElement("div");t.className="toast "+(type||"ok");t.textContent=msg;w.appendChild(t);setTimeout(function(){t.remove();},3000);}
 
-// TOAST
-function toast(msg,type){
-var w=document.getElementById("toastWrap");
-var t=document.createElement("div");
-t.className="toast "+(type||"ok");
-t.textContent=msg;
-w.appendChild(t);
-setTimeout(function(){t.remove();},3000);
-}
+document.addEventListener("click",function(e){if(!e.target.closest(".user-btn")&&!e.target.closest(".dropdown"))document.getElementById("userDD").classList.remove("open");});
 
-// SCROLL
-window.addEventListener("scroll",function(){
-var b=document.getElementById("btt");
-if(window.scrollY>300)b.classList.add("show");else b.classList.remove("show");
-});
-
-// CLICK OUTSIDE
-document.addEventListener("click",function(e){
-if(!e.target.closest(".user-btn")&&!e.target.closest(".dropdown"))document.getElementById("userDD").classList.remove("open");
-});
-
-// INIT
-renderAll();renderEps();renderSched();renderWP();renderPosts();renderTrends();renderCmts();updateUI();
+renderGrids();renderEps();renderPosts();renderTrends();renderCmts();updateUI();
 if(user){document.getElementById("setName").value=user.name||"";document.getElementById("setEmail").value=user.email||"";}
 </script>
 </body>
