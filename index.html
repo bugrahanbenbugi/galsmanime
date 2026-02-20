@@ -213,7 +213,7 @@ a{text-decoration:none;color:inherit}button{cursor:pointer;border:none;outline:n
 <div class="pg on" id="pg-home">
 <section class="hero"><div class="hero-bg"></div><div class="hero-dark"></div>
 <div class="hero-info"><span class="hero-badge">TURKCE DUBLAJ</span><h1>Naruto</h1><p>Coplerin arasinda gecen destansi bir macera! Rudo'nun hayatta kalma mucadelesi Turkce Dublaj ile.</p>
-<div class="hero-meta"><span><i class="fa-solid fa-star"></i> 8.7</span><span><i class="fa-solid fa-clock"></i> 24dk</span></div>
+<div class="hero-meta"><span><i class="fa-solid fa-star"></i> 9.4</span><span><i class="fa-solid fa-clock"></i> 24dk</span></div>
 <div class="hero-btns"><button class="btn btn-p btn-l" onclick="go('watch')"><i class="fa-solid fa-play"></i> Izle</button><button class="btn btn-pk btn-l" onclick="togFav('Naruto')" id="heroFav"><i class="fa-regular fa-heart"></i> Favorile</button><button class="btn btn-b btn-l" onclick="addWL('Naruto','1')"><i class="fa-solid fa-clock"></i> Sonra Izle</button><button class="btn btn-g btn-l" onclick="go('detail')">Detay</button></div>
 </div></section>
 <section class="sec"><div class="box"><div class="sec-head"><h2>Son Eklenen</h2></div><div class="grid" id="g1"></div></div></section>
@@ -337,7 +337,7 @@ if(db){if(fav)db.innerHTML='<i class="fa-solid fa-heart"></i> Favorilerde';else 
 function removeFav(i){var l=getFav();l.splice(i,1);saveFav(l);renderFav();updateFavBtns();toast("Favorilerden cikarildi","ok");}
 function renderFav(){var l=getFav(),el=document.getElementById("favList");if(!el)return;if(!user){el.innerHTML='<div class="empty-wl"><i class="fa-solid fa-lock" style="font-size:2rem;margin-bottom:10px;display:block;color:var(--p)"></i>Giris yapin</div>';return;}if(l.length===0){el.innerHTML='<div class="empty-wl"><i class="fa-solid fa-heart" style="font-size:2rem;margin-bottom:10px;display:block;color:var(--t3)"></i>Favori listeniz bos</div>';return;}var h="";for(var i=0;i<l.length;i++){h+='<div class="wl-card"><img src="naruto_poster.jpg" alt=""><div><h4>'+l[i].name+'</h4><p>Eklendi: '+l[i].date+'</p><div class="wl-btns"><button class="btn btn-p btn-s" onclick="go(\'detail\')"><i class="fa-solid fa-info-circle"></i> Detay</button><button class="btn btn-g btn-s" onclick="removeFav('+i+')"><i class="fa-solid fa-heart-crack"></i> Cikar</button></div></div></div>';}el.innerHTML=h;}
 
-function mc(ep){return'<div class="card" onclick="go(\'detail\')"><div class="card-img"><img src="naruto_poster.jpg" alt=""><div class="card-hover"><div class="card-play"><i class="fa-solid fa-play"></i></div></div><span class="card-badge">Bolum '+ep+'</span><span class="card-rate"><i class="fa-solid fa-star"></i> 8.7</span></div><div class="card-info"><h3>Naruto</h3><div class="genre">Aksiyon - Bolum '+ep+'</div><div class="meta"><span>Turkce Dublaj</span><span>24dk</span></div></div></div>';}
+function mc(ep){return'<div class="card" onclick="go(\'detail\')"><div class="card-img"><img src="naruto_poster.jpg" alt=""><div class="card-hover"><div class="card-play"><i class="fa-solid fa-play"></i></div></div><span class="card-badge">Bolum '+ep+'</span><span class="card-rate"><i class="fa-solid fa-star"></i> 9.4</span></div><div class="card-info"><h3>Naruto</h3><div class="genre">Aksiyon - Bolum '+ep+'</div><div class="meta"><span>Turkce Dublaj</span><span>24dk</span></div></div></div>';}
 
 function init(){
 document.getElementById("g1").innerHTML=mc(1);document.getElementById("g2").innerHTML=mc(1);
